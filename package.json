@@ -1,1 +1,33 @@
-{"name":"disassemble-package","version":"0.0.0","description":"Separate the config contained in package.json into a file.","main":"dist/index.js","repository":"https://github.com/tanmen/disassemble-package","author":"tanmen","license":"MIT","bin":{"disassemble-package":"dist/cli.js"},"files":["dist"],"scripts":{"build":"tsc","test":"jest","postinstall":"typesync --ignoredeps=dev && yarn check --integrity || yarn install --ignore-scripts && yarn-deduplicate"},"devDependencies":{"@types/command-line-args":"^5.0.0","@types/jest":"^26.0.22","jest":"^26.6.3","ts-jest":"^26.5.4","typescript":"^4.2.4","typesync":"^0.8.0","yarn-deduplicate":"^3.1.0"},"dependencies":{"command-line-args":"^5.1.1","loading-spinner":"^1.2.1"}}
+{
+  "name": "disassemble-package",
+  "version": "0.0.1",
+  "description": "Separate the config contained in package.json into a file.",
+  "main": "dist/index.js",
+  "repository": "https://github.com/tanmen/disassemble-package",
+  "author": "tanmen",
+  "license": "MIT",
+  "bin": {
+    "disassemble-package": "dist/cli.js"
+  },
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "tsc",
+    "test": "jest",
+    "postinstall": "typesync --ignoredeps=dev && yarn check --integrity || yarn install --ignore-scripts && yarn-deduplicate"
+  },
+  "devDependencies": {
+    "@types/command-line-args": "^5.0.0",
+    "@types/jest": "^26.0.22",
+    "jest": "^26.6.3",
+    "ts-jest": "^26.5.4",
+    "typescript": "^4.2.4",
+    "typesync": "^0.8.0",
+    "yarn-deduplicate": "^3.1.0"
+  },
+  "dependencies": {
+    "command-line-args": "^5.1.1",
+    "loading-spinner": "^1.2.1"
+  }
+}
