@@ -16,7 +16,8 @@
     "build": "tsc",
     "test": "jest",
     "postinstall": "typesync --ignoredeps=dev && yarn check --integrity || yarn install --ignore-scripts && yarn-deduplicate",
-    "prepublishOnly": "yarn build && pinst --disable",
+    "prepublish": "yarn build",
+    "prepublishOnly": "pinst --disable",
     "postpublish": "pinst --enable"
   },
   "dependencies": {
