@@ -11,6 +11,7 @@ npx disassembler-package
 - babel
 - browserslist
 - eslint
+- husky
 
 If you would like to use a different library, please specify your preference in the issue.
 

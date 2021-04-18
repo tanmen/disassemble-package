@@ -97,5 +97,10 @@
     "presets": [
       "react-app"
     ]
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "yarn lint:fix && yarn depcheck"
+    }
   }
 }
