@@ -1,6 +1,6 @@
 {
   "name": "disassemble-package",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Separate the config contained in package.json into a file.",
   "main": "dist/index.js",
   "repository": "https://github.com/tanmen/disassemble-package",
