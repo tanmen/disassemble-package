@@ -18,11 +18,10 @@ If you would like to use a different library, please specify your preference in 
 ```shell
 disassembler-package <path> [--space count]
 ```
-| name  | type   | required | default                            | description                                      | 
-| ----- | ------ | -------- | ---------------------------------- | ------------------------------------------------ | 
-| path  | string | false    | process.cmd() // current directory | Specifies location path where `package.json` is. | 
-| space | number | false    | 2                                  | Specify the indent when regenerating.            | 
-
+| name  | short | type   | required | default                            | description                                      | 
+| ----- | ----- | ------ | -------- | ---------------------------------- | ------------------------------------------------ | 
+| path  |       | string | false    | process.cmd() // current directory | Specifies location path where `package.json` is. | 
+| space | s     | number | false    | 2                                  | Specify the indent when regenerating.            | 
 ## License
 MIT License
 
