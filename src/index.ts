@@ -2,7 +2,7 @@ import {readFile, writeFile} from 'fs/promises'
 import {join} from 'path'
 import {disassembleBabel, disassembleBrowserslist, disassembleEslint, disassembleJest} from "./disassemblers";
 
-export const DisassemblePackage = async (path: string = process.cwd(), {space = 2}: Option) => {
+export const DisassemblePackage = async (path: string = process.cwd(), {space = 2}: Partial<Option>) => {
   const json = JSON.parse(await readFile(join(path, 'package.json'), {encoding: "utf8"}))
 
   await Promise.all(exec([path, json, {space}], [
