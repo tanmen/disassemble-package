@@ -1,6 +1,6 @@
 {
   "name": "disassemble-package",
-  "version": "1.1.0",
+  "version": "1.1.1",
   "description": "Separate the config contained in package.json into a file.",
   "main": "dist/index.js",
   "repository": "https://github.com/tanmen/disassemble-package",
@@ -16,13 +16,13 @@
     "build": "tsc",
     "test": "jest",
     "postinstall": "typesync --ignoredeps=dev && yarn check --integrity || yarn install --ignore-scripts && yarn-deduplicate",
-    "prepublish": "yarn build",
+    "prepre": "yarn build",
     "prepublishOnly": "pinst --disable",
     "postpublish": "pinst --enable"
   },
   "dependencies": {
     "command-line-args": "^5.1.1",
-    "loading-spinner": "^1.2.1"
+    "ora": "^5.4.0"
   },
   "devDependencies": {
     "@types/command-line-args": "^5.0.0",
