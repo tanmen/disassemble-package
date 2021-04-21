@@ -1,7 +1,7 @@
 #!/usr/bin/env node
-const {DisassemblePackage} = require("./index");
-const commandLineArgs = require("command-line-args");
-const spinner = require('loading-spinner')
+import {DisassemblePackage} from "./index";
+import commandLineArgs from "command-line-args";
+import ora from "ora";
 
 const mainDefinitions = [
   {name: 'path', type: String, defaultOption: true}
@@ -12,9 +12,8 @@ const optionDefinitions = [
 const mainOption = commandLineArgs(mainDefinitions, {stopAtFirstUnknown: true})
 const option = {...mainOption, ...commandLineArgs(optionDefinitions, {argv: mainOption._unknown || []})}
 
-spinner.start(100, {
-  clearChar: true
-})
+const spinner = ora('Disassembling');
 
+spinner.start()
 DisassemblePackage(option.path, {space: option.space})
   .then(() => spinner.stop())

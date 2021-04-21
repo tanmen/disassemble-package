@@ -1,0 +1,24 @@
+name: Test
+on: push
+jobs:
+  Build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - name: Setup Node.js
+        uses: actions/setup-node@v2
+        with:
+          node-version: 14.x
+      - name: Cache modules
+        id: cache
+        uses: actions/cache@v2
+        env:
+         cache-name: node-modules
+        with:
+          path: node_modules
+          key: ${{ runner.os }}-${{ env.cache-name }}-${{ hashFiles('yarn.lock') }}
+      - name: Install modules
+        run: yarn install --frozen-lockfile
+        if: steps.cache.outputs.cache-hit != 'true'
+      - name: Build
+        run: yarn build
