@@ -1,4 +1,7 @@
 # DisassemblePackage
+![npm](https://img.shields.io/npm/dw/disassemble-package)
+[![CodeQL](https://github.com/tanmen/disassemble-package/actions/workflows/codeql-analysis.yml/badge.svg)](https://github.com/tanmen/disassemble-package/actions/workflows/codeql-analysis.yml)
+
 Decomposes `config files` contained in `package.json` and converts it into separate `config files`.
 
 ## Usage
