@@ -1,5 +1,5 @@
 # DisassemblePackage
-![npm](https://img.shields.io/npm/dw/disassemble-package)
+[![npm](https://img.shields.io/npm/dw/disassemble-package)](https://www.npmjs.com/package/disassemble-package)
 [![Build](https://github.com/tanmen/disassemble-package/actions/workflows/build.yml/badge.svg)](https://github.com/tanmen/disassemble-package/actions/workflows/build.yml)
 [![CodeQL](https://github.com/tanmen/disassemble-package/actions/workflows/codeql-analysis.yml/badge.svg)](https://github.com/tanmen/disassemble-package/actions/workflows/codeql-analysis.yml)
 
