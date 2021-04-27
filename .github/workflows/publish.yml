@@ -81,6 +81,7 @@ jobs:
         uses: actions/setup-node@v2
         with:
           node-version: 14.x
+          registry-url: https://registry.npmjs.org/
       - name: Cache modules
         id: cache
         uses: actions/cache@v2
@@ -95,5 +96,4 @@ jobs:
         run: yarn semantic-release
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          NODE_AUTH_TOKEN: ${{secrets.NPM_TOKEN}}
-
+          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}

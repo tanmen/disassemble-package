@@ -3,8 +3,6 @@ import {DisassemblePackage} from "./index";
 import commandLineArgs from "command-line-args";
 import ora from "ora";
 
-console.log(process.argv)
-
 const mainDefinitions = [
   {name: 'path', type: String, defaultOption: true}
 ]
@@ -18,4 +16,4 @@ const spinner = ora('Disassembling');
 
 spinner.start()
 DisassemblePackage(option.path, {space: option.space})
-  .then(() => spinner.stop())
+  .finally(() => spinner.stop())
