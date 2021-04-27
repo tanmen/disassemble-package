@@ -1,3 +1,11 @@
+## [1.3.2](https://github.com/tanmen/disassemble-package/compare/v1.3.1...v1.3.2) (2021-04-27)
+
+
+### Bug Fixes
+
+* add keyword in package.json ([6ea2d91](https://github.com/tanmen/disassemble-package/commit/6ea2d91f142427f79c973e4b22f465ffff8c419a))
+* Removed extra space ([7356651](https://github.com/tanmen/disassemble-package/commit/735665122000d3bfa88d1500fdae8e398ca0211b))
+
 ## [1.3.1](https://github.com/tanmen/disassemble-package/compare/v1.3.0...v1.3.1) (2021-04-27)
 
 
