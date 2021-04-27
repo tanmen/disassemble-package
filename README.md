@@ -7,7 +7,7 @@ Decomposes `config files` contained in `package.json` and converts it into separ
 
 ## Usage
 ```shell
-npx disassembler-package
+npx disassemble-package
 ```
 
 ## Supported Libraries
@@ -21,7 +21,7 @@ If you would like to use a different library, please specify your preference in 
 
 ## Command Details
 ```shell
-disassembler-package <path> [--space count]
+disassemble-package <path> [--space count]
 ```
 | name  | short | type   | required | default                            | description                                      | 
 | ----- | ----- | ------ | -------- | ---------------------------------- | ------------------------------------------------ | 
