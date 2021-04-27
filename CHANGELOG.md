@@ -1,3 +1,10 @@
+## [1.2.1](https://github.com/tanmen/disassemble-package/compare/v1.2.0...v1.2.1) (2021-04-27)
+
+
+### Bug Fixes
+
+* add publish files ([745643b](https://github.com/tanmen/disassemble-package/commit/745643b00f794fdbb75f6c5a32fa709d2f987daa))
+
 # [1.2.0](https://github.com/tanmen/disassemble-package/compare/v1.1.3...v1.2.0) (2021-04-27)
 
 
