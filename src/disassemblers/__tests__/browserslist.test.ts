@@ -23,4 +23,9 @@ describe('nominal', () => {
     expect(json).not.toHaveProperty('browserslist');
     expect(writeFile).toBeCalledWith('path/.browserslistrc', result);
   });
+  it('should be skip', async () => {
+    await disassembleBrowserslist('path',{}, {space: 0});
+
+    expect(writeFile).not.toBeCalled();
+  });
 });

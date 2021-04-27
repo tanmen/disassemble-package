@@ -15,4 +15,9 @@ describe('nominal', () => {
     expect(writeFile)
       .toBeCalledWith('path/.eslintrc', JSON.stringify(packageJson.eslintConfig, undefined, space));
   });
+  it('should be skip', async () => {
+    await disassembleEslint('path',{}, {space: 0});
+
+    expect(writeFile).not.toBeCalled();
+  });
 });

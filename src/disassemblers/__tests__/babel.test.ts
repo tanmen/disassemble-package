@@ -14,4 +14,9 @@ describe('nominal', () => {
     expect(json).not.toHaveProperty('babel');
     expect(writeFile).toBeCalledWith('path/.babelrc', JSON.stringify(packageJson.babel, undefined, space));
   });
+  it('should be skip', async () => {
+    await disassembleBabel('path', {}, {space: 0});
+
+    expect(writeFile).not.toBeCalled();
+  });
 });

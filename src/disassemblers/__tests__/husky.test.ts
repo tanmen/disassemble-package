@@ -15,4 +15,9 @@ describe('nominal', () => {
     expect(writeFile).toBeCalledWith('path/.huskyrc.js',
       `module.exports = ${JSON.stringify(packageJson.husky, undefined, space)}`);
   });
+  it('should be skip', async () => {
+    await disassembleHusky('path', {}, {space: 0});
+
+    expect(writeFile).not.toBeCalled();
+  });
 });

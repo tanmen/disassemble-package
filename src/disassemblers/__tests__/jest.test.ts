@@ -15,4 +15,9 @@ describe('nominal', () => {
     expect(writeFile).toBeCalledWith('path/jest.config.json',
       JSON.stringify(packageJson.jest, undefined, space));
   });
+  it('should be skip', async () => {
+    await disassembleJest('path', {}, {space: 0});
+
+    expect(writeFile).not.toBeCalled();
+  });
 });

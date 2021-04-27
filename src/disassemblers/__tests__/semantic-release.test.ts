@@ -15,4 +15,9 @@ describe('nominal', () => {
     expect(writeFile).toBeCalledWith('path/.releaserc',
       JSON.stringify(packageJson.release, undefined, space));
   });
+  it('should be skip', async () => {
+    await disassembleSemanticRelease('path', {}, {space: 0});
+
+    expect(writeFile).not.toBeCalled();
+  });
 });
