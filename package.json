@@ -8,7 +8,13 @@
   "funding": "https://github.com/sponsors/tanmen",
   "author": "tanmen",
   "license": "MIT",
-  "keywords": ["package", "package.json", "disassemble", "separate", "decompose"],
+  "keywords": [
+    "package",
+    "package.json",
+    "disassemble",
+    "separate",
+    "decompose"
+  ],
   "bin": {
     "disassemble-package": "cli.js"
   },
