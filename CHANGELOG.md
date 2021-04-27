@@ -1,3 +1,10 @@
+# [1.3.0](https://github.com/tanmen/disassemble-package/compare/v1.2.2...v1.3.0) (2021-04-27)
+
+
+### Features
+
+* Supported semantic-release ([bad93a3](https://github.com/tanmen/disassemble-package/commit/bad93a37b3979f85a36fb09a1c26f08caa4fc960))
+
 ## [1.2.2](https://github.com/tanmen/disassemble-package/compare/v1.2.1...v1.2.2) (2021-04-27)
 
 
