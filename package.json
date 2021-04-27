@@ -21,6 +21,7 @@
     "semantic-release": "semantic-release"
   },
   "dependencies": {
+    "chalk": "^4.1.1",
     "command-line-args": "^5.1.1",
     "ora": "^5.4.0"
   },
