@@ -4,7 +4,7 @@ import commandLineArgs from "command-line-args";
 import ora from "ora";
 import {DisassemblePackage} from "./index";
 
-console.log(`${chalk.white('»')}  ${chalk.gray(chalk`${require('../package.json').name} {white v${require('../package.json').version}}`)}`)
+console.log(`${chalk.white('»')} ${chalk.gray(chalk`${require('../package.json').name} {white v${require('../package.json').version}}`)}`)
 
 const mainDefinitions = [
   {name: 'path', type: String, defaultOption: true}
