@@ -1,3 +1,10 @@
+## [1.2.2](https://github.com/tanmen/disassemble-package/compare/v1.2.1...v1.2.2) (2021-04-27)
+
+
+### Bug Fixes
+
+* Update Readme ([18d2785](https://github.com/tanmen/disassemble-package/commit/18d278549f4f15de81713e7fcbbc8e8655f6ea38))
+
 ## [1.2.1](https://github.com/tanmen/disassemble-package/compare/v1.2.0...v1.2.1) (2021-04-27)
 
 
