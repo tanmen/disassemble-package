@@ -102,5 +102,8 @@
     "hooks": {
       "pre-commit": "yarn lint:fix && yarn depcheck"
     }
+  },
+  "release": {
+    "branches": ["master", "next"]
   }
 }

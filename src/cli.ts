@@ -1,7 +1,7 @@
 #!/usr/bin/env node
-import {DisassemblePackage} from "./index";
 import commandLineArgs from "command-line-args";
 import ora from "ora";
+import {DisassemblePackage} from "./index";
 
 const mainDefinitions = [
   {name: 'path', type: String, defaultOption: true}

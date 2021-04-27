@@ -10,7 +10,7 @@ describe('nominal', () => {
 
   it('should be run with option', () => {
     const path = './test';
-    process.argv = ["","", path, "-s", "2"]
+    process.argv = ["", "", path, "-s", "2"]
 
     expect(() => require('../cli')).not.toThrow()
 
