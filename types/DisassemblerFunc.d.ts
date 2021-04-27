@@ -1,1 +1,1 @@
-type DisassemblerFunc = (path: string, json: any, {space}: Option) => Promise<void>
+type DisassemblerFunc = (path: string, json: any, option: Option) => Promise<void>

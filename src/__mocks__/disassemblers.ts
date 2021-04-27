@@ -1,0 +1,5 @@
+export const disassembleBabel = jest.fn(() => Promise.resolve())
+export const disassembleBrowserslist = jest.fn(() => Promise.resolve())
+export const disassembleEslint = jest.fn(() => Promise.resolve())
+export const disassembleHusky = jest.fn(() => Promise.resolve())
+export const disassembleJest = jest.fn(() => Promise.resolve())
