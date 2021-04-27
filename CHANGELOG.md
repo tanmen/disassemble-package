@@ -1,3 +1,11 @@
+## [1.3.1](https://github.com/tanmen/disassemble-package/compare/v1.3.0...v1.3.1) (2021-04-27)
+
+
+### Bug Fixes
+
+* changed the output to gorgeous. ([9fe3f54](https://github.com/tanmen/disassemble-package/commit/9fe3f5489ebbd02e9bd06278f2509f10c0ccd6f6))
+* semantic-release hadn't been called. ([b973e1d](https://github.com/tanmen/disassemble-package/commit/b973e1d7491e0915c6aef5ba8197d42ff489a780))
+
 # [1.3.0](https://github.com/tanmen/disassemble-package/compare/v1.2.2...v1.3.0) (2021-04-27)
 
 
