@@ -2,10 +2,10 @@
 import chalk from "chalk";
 import commandLineArgs from "command-line-args";
 import ora from "ora";
+import {config} from "./config";
 import {DisassemblePackage} from "./index";
-import packegeJson from "../package.json";
 
-console.log(`${chalk.white('»')} ${chalk.gray(chalk`${packegeJson.name} {white v${packegeJson.version}}`)}`)
+console.log(`${chalk.white('»')} ${chalk.gray(chalk`${config.name} {white v${config.version}}`)}`)
 
 const mainDefinitions = [
   {name: 'path', type: String, defaultOption: true}

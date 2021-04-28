@@ -1,6 +1,7 @@
 import {DisassemblePackage} from "../index";
 
 jest.mock('../index')
+jest.mock('../config')
 const _argv = [...process.argv]
 
 describe('nominal', () => {

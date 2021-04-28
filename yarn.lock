@@ -2282,15 +2282,6 @@ dir-glob@^3.0.0, dir-glob@^3.0.1:
   dependencies:
     path-type "^4.0.0"
 
-disassemble-package@^1.4.0:
-  version "1.4.0"
-  resolved "https://registry.yarnpkg.com/disassemble-package/-/disassemble-package-1.4.0.tgz#2ce58f2ab7d0087ead3b884c2cf300ff9fe4573d"
-  integrity sha512-fZilIZii6Xl5BasUY2ec4ocTwd85+qVKiZS44JbhG5bx9p2uzFb6fz/ee5JaoivsTuOCiEXwUHQSWpz34BS7JA==
-  dependencies:
-    chalk "^4.1.1"
-    command-line-args "^5.1.1"
-    ora "^5.4.0"
-
 domexception@^2.0.1:
   version "2.0.1"
   resolved "https://registry.yarnpkg.com/domexception/-/domexception-2.0.1.tgz#fb44aefba793e1574b0af6aed2801d057529f304"
@@ -3046,6 +3037,11 @@ humanize-ms@^1.2.1:
   integrity sha1-xG4xWaKT9riW2ikxbYtv6Lt5u+0=
   dependencies:
     ms "^2.0.0"
+
+husky@^6.0.0:
+  version "6.0.0"
+  resolved "https://registry.yarnpkg.com/husky/-/husky-6.0.0.tgz#810f11869adf51604c32ea577edbc377d7f9319e"
+  integrity sha512-SQS2gDTB7tBN486QSoKPKQItZw97BMOd+Kdb6ghfpBc0yXyzrddI0oDV5MkDAbuB4X2mO3/nj60TRMcYxwzZeQ==
 
 iconv-lite@0.4.24:
   version "0.4.24"
