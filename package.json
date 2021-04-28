@@ -22,7 +22,7 @@
     "build": "tsc",
     "test": "jest",
     "postinstall": "typesync && yarn check --integrity || yarn install --ignore-scripts && yarn-deduplicate",
-    "prepublishOnly": "pinst --disable",
+    "prepublishOnly": "yarn build && pinst --disable",
     "postpublish": "pinst --enable",
     "presemantic-release": "yarn build && cp package.json dist && cp README.md dist && cp LICENSE dist",
     "semantic-release": "semantic-release"
@@ -30,6 +30,7 @@
   "dependencies": {
     "chalk": "^4.1.1",
     "command-line-args": "^5.1.1",
+    "disassemble-package": "^1.4.0",
     "ora": "^5.4.0"
   },
   "devDependencies": {
@@ -49,15 +50,5 @@
     "typescript": "^4.2.4",
     "typesync": "^0.8.0",
     "yarn-deduplicate": "^3.1.0"
-  },
-  "commitlint": {
-    "extends": [
-      "@commitlint/config-conventional"
-    ]
-  },
-  "husky": {
-    "hooks": {
-      "commit-msg": "commitlint -E HUSKY_GIT_PARAMS"
-    }
   }
 }
