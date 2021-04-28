@@ -1,3 +1,10 @@
+## [1.4.3](https://github.com/tanmen/disassemble-package/compare/v1.4.2...v1.4.3) (2021-04-28)
+
+
+### Bug Fixes
+
+* relation path error ([a4f5e67](https://github.com/tanmen/disassemble-package/commit/a4f5e6770bf7f3b6cfd00fd02819a64253d51258))
+
 ## [1.4.2](https://github.com/tanmen/disassemble-package/compare/v1.4.1...v1.4.2) (2021-04-28)
 
 
