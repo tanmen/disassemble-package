@@ -1,3 +1,10 @@
+## [1.3.3](https://github.com/tanmen/disassemble-package/compare/v1.3.2...v1.3.3) (2021-04-28)
+
+
+### Bug Fixes
+
+* **release:** release flow changed ([90a7f55](https://github.com/tanmen/disassemble-package/commit/90a7f550107da66f5f6c2ea1205d708e52a6143e))
+
 ## [1.3.2](https://github.com/tanmen/disassemble-package/compare/v1.3.1...v1.3.2) (2021-04-27)
 
 
