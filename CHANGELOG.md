@@ -1,3 +1,10 @@
+## [1.4.1](https://github.com/tanmen/disassemble-package/compare/v1.4.0...v1.4.1) (2021-04-28)
+
+
+### Bug Fixes
+
+* extract commitlintrc and huskyrc file ([92842f2](https://github.com/tanmen/disassemble-package/commit/92842f2f8af99b626ebeea03aa557605bfc56603))
+
 # [1.4.0](https://github.com/tanmen/disassemble-package/compare/v1.3.3...v1.4.0) (2021-04-28)
 
 
