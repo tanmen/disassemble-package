@@ -98,6 +98,11 @@
       "react-app"
     ]
   },
+  "commitlint": {
+    "extends": [
+      "@commitlint/config-conventional"
+    ]
+  },
   "husky": {
     "hooks": {
       "pre-commit": "yarn lint:fix && yarn depcheck"
