@@ -1,3 +1,10 @@
+# [1.4.0](https://github.com/tanmen/disassemble-package/compare/v1.3.3...v1.4.0) (2021-04-28)
+
+
+### Features
+
+* **commitlint:** supported commitlint ([6207ebd](https://github.com/tanmen/disassemble-package/commit/6207ebdd980cd47faf8b32592b7349169c54c3b7))
+
 ## [1.3.3](https://github.com/tanmen/disassemble-package/compare/v1.3.2...v1.3.3) (2021-04-28)
 
 
