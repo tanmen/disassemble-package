@@ -1,3 +1,10 @@
+## [1.4.2](https://github.com/tanmen/disassemble-package/compare/v1.4.1...v1.4.2) (2021-04-28)
+
+
+### Bug Fixes
+
+* Bundle packege.json ([7899cac](https://github.com/tanmen/disassemble-package/commit/7899cac0d16ee96c291ce8d6aed79a117299a27c))
+
 ## [1.4.1](https://github.com/tanmen/disassemble-package/compare/v1.4.0...v1.4.1) (2021-04-28)
 
 
