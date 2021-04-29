@@ -1,1 +1,1 @@
-export const config = require('./package.json')
+export const config = require('./package.json');

@@ -1,8 +1,8 @@
-import {writeFile} from "fs/promises";
-import packageJson from '../../../test/package.json'
-import {disassembleSemanticRelease} from "../semantic-release";
+import {writeFile} from 'fs/promises';
+import packageJson from '../../../test/package.json';
+import {disassembleSemanticRelease} from '../semantic-release';
 
-jest.mock('fs/promises')
+jest.mock('fs/promises');
 
 describe('nominal', () => {
   it('should be write file', async () => {

@@ -1,8 +1,8 @@
-import {writeFile} from "fs/promises";
-import packageJson from '../../../test/package.json'
-import {disassembleHusky} from "../husky";
+import {writeFile} from 'fs/promises';
+import packageJson from '../../../test/package.json';
+import {disassembleHusky} from '../husky';
 
-jest.mock('fs/promises')
+jest.mock('fs/promises');
 
 describe('nominal', () => {
   it('should be write file', async () => {
