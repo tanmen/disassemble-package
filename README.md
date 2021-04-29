@@ -21,11 +21,12 @@ DisassemblePackage(process.cwd(), {space: 2})
 ```
 
 ## Supported Libraries
-- jest
 - babel
 - browserslist
+- commitlint
 - eslint
 - husky
+- jest
 - semantic-release
 
 If you would like to use a different library, please specify your preference in the issue.
