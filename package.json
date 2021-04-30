@@ -22,12 +22,11 @@
     "build": "tsc",
     "test": "jest",
     "lint": "eslint src --ext .ts,.tsx",
-    "postinstall": "typesync && yarn check --integrity || yarn install --ignore-scripts && yarn-deduplicate",
+    "postinstall": "husky install && typesync && yarn check --integrity || yarn install --ignore-scripts && yarn-deduplicate",
     "prepublishOnly": "pinst --disable",
     "postpublish": "pinst --enable",
     "presemantic-release": "yarn build && cp package.json dist && cp README.md dist && cp LICENSE dist",
-    "semantic-release": "semantic-release",
-    "prepare": "husky install"
+    "semantic-release": "semantic-release"
   },
   "dependencies": {
     "chalk": "^4.1.1",

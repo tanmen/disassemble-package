@@ -1,5 +1,5 @@
 {
-  "src/**/*.{js,jsx,ts,tsx}": [
+  "src/**/*.{js,ts}": [
     "yarn lint --fix"
   ]
 }
