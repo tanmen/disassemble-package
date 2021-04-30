@@ -1,3 +1,10 @@
+## [1.4.5](https://github.com/tanmen/disassemble-package/compare/v1.4.4...v1.4.5) (2021-04-30)
+
+
+### Bug Fixes
+
+* **readme:** add license info ([f5b9c9c](https://github.com/tanmen/disassemble-package/commit/f5b9c9cdd7b43ed4b1fa4fa961eb379bce84810a))
+
 ## [1.4.4](https://github.com/tanmen/disassemble-package/compare/v1.4.3...v1.4.4) (2021-04-29)
 
 
