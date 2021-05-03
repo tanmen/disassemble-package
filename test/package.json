@@ -110,5 +110,8 @@
   },
   "release": {
     "branches": ["master", "next"]
+  },
+  "build": {
+    "appId": "com.example.app"
   }
 }

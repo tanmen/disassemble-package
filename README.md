@@ -25,6 +25,7 @@ DisassemblePackage(process.cwd(), {space: 2})
 - babel
 - browserslist
 - commitlint
+- electron-builder
 - eslint
 - husky
 - jest
