@@ -1,3 +1,10 @@
+# [1.5.0](https://github.com/tanmen/disassemble-package/compare/v1.4.5...v1.5.0) (2021-05-03)
+
+
+### Features
+
+* **electron-builder:** supported electron-builder ([9ec9235](https://github.com/tanmen/disassemble-package/commit/9ec9235e9324ba9c315a5380c8cc72f2b9741578))
+
 ## [1.4.5](https://github.com/tanmen/disassemble-package/compare/v1.4.4...v1.4.5) (2021-04-30)
 
 
