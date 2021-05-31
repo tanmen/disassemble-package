@@ -1,3 +1,10 @@
+## [1.5.1](https://github.com/tanmen/disassemble-package/compare/v1.5.0...v1.5.1) (2021-05-31)
+
+
+### Bug Fixes
+
+* **readme:** change license position ([9d5e914](https://github.com/tanmen/disassemble-package/commit/9d5e914bad547f9e39cdb0ffb548235679845cfe))
+
 # [1.5.0](https://github.com/tanmen/disassemble-package/compare/v1.4.5...v1.5.0) (2021-05-03)
 
 
