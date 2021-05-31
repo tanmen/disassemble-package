@@ -41,11 +41,10 @@ disassemble-package <path> [--space count]
 | ----- | ----- | ------ | -------- | ---------------------------------- | ------------------------------------------------ | 
 | path  |       | string | false    | process.cmd() // current directory | Specifies location path where `package.json` is. | 
 | space | s     | number | false    | 2                                  | Specify the indent when regenerating.            | 
-## License
-MIT License
 
 ## Contribute
 Anyone welcome
 
 ## License
+MIT License
 [![FOSSA Status](https://app.fossa.com/api/projects/custom%2B25020%2Fgithub.com%2Ftanmen%2Fdisassemble-package.svg?type=large)](https://app.fossa.com/projects/custom%2B25020%2Fgithub.com%2Ftanmen%2Fdisassemble-package?ref=badge_large)
