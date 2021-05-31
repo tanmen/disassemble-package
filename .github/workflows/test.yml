@@ -67,7 +67,7 @@ jobs:
         id: test
         run: yarn test --coverage --json --outputFile=result.json --testLocationInResults
       - name: Report
-        uses: tanmen/jest-reporter@master
+        uses: tanmen/jest-reporter@read
         if: always()
         with:
           github-token: ${{ secrets.GITHUB_TOKEN }}
