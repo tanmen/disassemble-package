@@ -71,6 +71,7 @@ jobs:
         if: always()
         with:
           github-token: ${{ secrets.GITHUB_TOKEN }}
+          action-name: fix
       - name: Upload coverage to Codecov
         uses: codecov/codecov-action@v1
         with:
