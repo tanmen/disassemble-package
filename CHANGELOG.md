@@ -1,3 +1,10 @@
+## [1.5.3](https://github.com/tanmen/disassemble-package/compare/v1.5.2...v1.5.3) (2021-06-13)
+
+
+### Bug Fixes
+
+* remove token ([49fed00](https://github.com/tanmen/disassemble-package/commit/49fed00bd77ef4ae483058d4ce25ce9ba5ea07c2))
+
 ## [1.5.2](https://github.com/tanmen/disassemble-package/compare/v1.5.1...v1.5.2) (2021-06-13)
 
 
