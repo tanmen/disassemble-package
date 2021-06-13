@@ -2,6 +2,7 @@ version: 2
 updates:
   - package-ecosystem: "npm"
     directory: "/"
+    reviewers: ["tanmen"]
     schedule:
       interval: "daily"
     commit-message:

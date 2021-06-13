@@ -1,9 +1,5 @@
 name: Test
-on:
-  push:
-    branches:
-      - '**'
-      - '!main'
+on: pull_request
 jobs:
   Install:
     runs-on: ubuntu-latest
