@@ -1,3 +1,18 @@
+## [1.5.2](https://github.com/tanmen/disassemble-package/compare/v1.5.1...v1.5.2) (2021-06-13)
+
+
+### Bug Fixes
+
+* **deps:** bump ora from 5.4.0 to 5.4.1 ([1479c0d](https://github.com/tanmen/disassemble-package/commit/1479c0d7308bd59f580c8e96998c0e726c42994a))
+* **deps-dev:** bump @commitlint/cli from 12.1.1 to 12.1.4 ([2ae2547](https://github.com/tanmen/disassemble-package/commit/2ae2547a856176f7d89a673fe4e34c3c221af368))
+* **deps-dev:** bump @commitlint/config-conventional ([193f641](https://github.com/tanmen/disassemble-package/commit/193f6418fb1630fac1c216a07649b8f427b2acc2))
+* **deps-dev:** bump @typescript-eslint/eslint-plugin ([4157f64](https://github.com/tanmen/disassemble-package/commit/4157f64a12990428bbc1132ab48507a3c360c316))
+* **deps-dev:** bump @typescript-eslint/parser from 4.22.0 to 4.26.1 ([ae3bac5](https://github.com/tanmen/disassemble-package/commit/ae3bac5f0af3c0ccef4ad10ad5fb864483d5c890))
+* **deps-dev:** bump eslint from 7.25.0 to 7.28.0 ([023384d](https://github.com/tanmen/disassemble-package/commit/023384de2378040e5c18691a0369f998d860e051))
+* **deps-dev:** bump lint-staged from 10.5.4 to 11.0.0 ([339fd15](https://github.com/tanmen/disassemble-package/commit/339fd1540e2a4be23b80742bde5b575630044ca0))
+* **deps-dev:** bump semantic-release from 17.4.2 to 17.4.3 ([1e01659](https://github.com/tanmen/disassemble-package/commit/1e016590ea83db0e37812f102d314db2464f5dab))
+* **deps-dev:** bump typescript from 4.2.4 to 4.3.2 ([bb29138](https://github.com/tanmen/disassemble-package/commit/bb29138cefdf9d0ae73b63ecb651ac3248945298))
+
 ## [1.5.1](https://github.com/tanmen/disassemble-package/compare/v1.5.0...v1.5.1) (2021-05-31)
 
 
