@@ -80,6 +80,9 @@ jobs:
     needs: [ Test, Build ]
     steps:
       - uses: actions/checkout@v2
+        with:
+          fetch-depth: 0
+          persist-credentials: false
       - name: Setup Node.js
         uses: actions/setup-node@v2
         with:
