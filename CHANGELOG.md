@@ -1,3 +1,13 @@
+## [1.5.4](https://github.com/tanmen/disassemble-package/compare/v1.5.3...v1.5.4) (2021-06-14)
+
+
+### Bug Fixes
+
+* **deps-dev:** bump @semantic-release/npm from 7.1.1 to 7.1.3 ([10a9eff](https://github.com/tanmen/disassemble-package/commit/10a9eff35c9f036071fb904469a5e1d52064ef13))
+* **deps-dev:** bump @types/eslint from 7.2.10 to 7.2.13 ([af92cf2](https://github.com/tanmen/disassemble-package/commit/af92cf2b6f049374cd622822b7180554977027e8))
+* **deps-dev:** bump @types/jest from 26.0.22 to 26.0.23 ([1a4441e](https://github.com/tanmen/disassemble-package/commit/1a4441ea3baccff2a0d464d8e2ff613e8727d055))
+* **deps-dev:** bump ts-jest from 26.5.4 to 26.5.6 ([df61294](https://github.com/tanmen/disassemble-package/commit/df61294860d345025ea104d6fb40d0a5da7926cc))
+
 ## [1.5.3](https://github.com/tanmen/disassemble-package/compare/v1.5.2...v1.5.3) (2021-06-13)
 
 
