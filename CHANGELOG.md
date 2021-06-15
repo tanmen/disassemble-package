@@ -1,3 +1,10 @@
+## [1.5.6](https://github.com/tanmen/disassemble-package/compare/v1.5.5...v1.5.6) (2021-06-15)
+
+
+### Bug Fixes
+
+* **deps-dev:** bump @typescript-eslint/parser from 4.26.1 to 4.27.0 ([2e8295e](https://github.com/tanmen/disassemble-package/commit/2e8295edeef4c2621773d52696df4d377bd73823))
+
 ## [1.5.5](https://github.com/tanmen/disassemble-package/compare/v1.5.4...v1.5.5) (2021-06-15)
 
 
