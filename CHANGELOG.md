@@ -1,3 +1,10 @@
+## [1.5.14](https://github.com/tanmen/disassemble-package/compare/v1.5.13...v1.5.14) (2021-07-02)
+
+
+### Bug Fixes
+
+* **deps-dev:** bump husky from 6.0.0 to 7.0.0 ([7dc2efd](https://github.com/tanmen/disassemble-package/commit/7dc2efd2c49306cccb1e687f4f237d05d48991bc))
+
 ## [1.5.13](https://github.com/tanmen/disassemble-package/compare/v1.5.12...v1.5.13) (2021-07-01)
 
 
