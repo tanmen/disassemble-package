@@ -1,3 +1,14 @@
+## [1.5.17](https://github.com/tanmen/disassemble-package/compare/v1.5.16...v1.5.17) (2021-07-07)
+
+
+### Bug Fixes
+
+* **deps-dev:** bump @types/command-line-args from 5.0.0 to 5.0.1 ([4ecc7c3](https://github.com/tanmen/disassemble-package/commit/4ecc7c323200b25b430fd671f9897a5b871205b5))
+* **deps-dev:** bump @types/eslint from 7.2.13 to 7.2.14 ([0e3b789](https://github.com/tanmen/disassemble-package/commit/0e3b7892251fa22ac382dda854f42d4274519b16))
+* **deps-dev:** bump @types/jest from 26.0.23 to 26.0.24 ([53df2e6](https://github.com/tanmen/disassemble-package/commit/53df2e6a5982b28f4a2007f2899d20bd5dd74450))
+* **deps-dev:** bump @types/semantic-release from 17.2.0 to 17.2.1 ([9d74eef](https://github.com/tanmen/disassemble-package/commit/9d74eef6df1bf1317f76e9a58222c93879c1294d))
+* **deps-dev:** bump husky from 7.0.0 to 7.0.1 ([d6ecfbe](https://github.com/tanmen/disassemble-package/commit/d6ecfbe88140618f6c80a342b81196e037383a2a))
+
 ## [1.5.16](https://github.com/tanmen/disassemble-package/compare/v1.5.15...v1.5.16) (2021-07-06)
 
 
