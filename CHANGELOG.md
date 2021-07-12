@@ -1,3 +1,10 @@
+## [1.5.18](https://github.com/tanmen/disassemble-package/compare/v1.5.17...v1.5.18) (2021-07-12)
+
+
+### Bug Fixes
+
+* **deps:** bump command-line-args from 5.1.1 to 5.1.2 ([1eb4e49](https://github.com/tanmen/disassemble-package/commit/1eb4e49b583fc29436467f2e739d188d76edc166))
+
 ## [1.5.17](https://github.com/tanmen/disassemble-package/compare/v1.5.16...v1.5.17) (2021-07-07)
 
 
