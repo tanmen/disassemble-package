@@ -1,3 +1,12 @@
+## [1.5.20](https://github.com/tanmen/disassemble-package/compare/v1.5.19...v1.5.20) (2021-07-13)
+
+
+### Bug Fixes
+
+* **deps:** bump command-line-args from 5.1.2 to 5.1.3 ([af42ab5](https://github.com/tanmen/disassemble-package/commit/af42ab5f3e7e3f91d88ce2e365338e81a81c2545))
+* **deps-dev:** bump @typescript-eslint/eslint-plugin ([cb3c2b9](https://github.com/tanmen/disassemble-package/commit/cb3c2b9668f15c98fddb1ba623070fb2c789818d))
+* **deps-dev:** bump @typescript-eslint/parser from 4.28.2 to 4.28.3 ([f6575dd](https://github.com/tanmen/disassemble-package/commit/f6575ddbcc74564cf79d6b6c359df21d62d0e3b7))
+
 ## [1.5.19](https://github.com/tanmen/disassemble-package/compare/v1.5.18...v1.5.19) (2021-07-13)
 
 
