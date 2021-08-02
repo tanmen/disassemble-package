@@ -1,3 +1,11 @@
+## [1.5.32](https://github.com/tanmen/disassemble-package/compare/v1.5.31...v1.5.32) (2021-08-02)
+
+
+### Bug Fixes
+
+* **deps:** bump chalk from 4.1.1 to 4.1.2 ([be6da48](https://github.com/tanmen/disassemble-package/commit/be6da48c00f49ebdcd56013147446e19a3eda5c9))
+* **deps-dev:** bump eslint from 7.31.0 to 7.32.0 ([4908d82](https://github.com/tanmen/disassemble-package/commit/4908d82ee3c6c10221df046cda3a0db53eded0bb))
+
 ## [1.5.31](https://github.com/tanmen/disassemble-package/compare/v1.5.30...v1.5.31) (2021-07-30)
 
 
