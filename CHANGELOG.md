@@ -1,3 +1,10 @@
+## [1.5.35](https://github.com/tanmen/disassemble-package/compare/v1.5.34...v1.5.35) (2021-08-09)
+
+
+### Bug Fixes
+
+* **deps-dev:** bump @types/command-line-args from 5.0.1 to 5.2.0 ([3d747b2](https://github.com/tanmen/disassemble-package/commit/3d747b239ef260af3033f957427a2fd3c68a5db8))
+
 ## [1.5.34](https://github.com/tanmen/disassemble-package/compare/v1.5.33...v1.5.34) (2021-08-04)
 
 
