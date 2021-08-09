@@ -1,3 +1,10 @@
+## [1.5.36](https://github.com/tanmen/disassemble-package/compare/v1.5.35...v1.5.36) (2021-08-09)
+
+
+### Bug Fixes
+
+* **deps-dev:** bump lint-staged from 11.1.1 to 11.1.2 ([f1eba0f](https://github.com/tanmen/disassemble-package/commit/f1eba0f4ca3e92387bd8783c2836dddaa7f9e727))
+
 ## [1.5.35](https://github.com/tanmen/disassemble-package/compare/v1.5.34...v1.5.35) (2021-08-09)
 
 
