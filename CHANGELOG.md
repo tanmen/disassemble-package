@@ -1,3 +1,11 @@
+## [1.5.37](https://github.com/tanmen/disassemble-package/compare/v1.5.36...v1.5.37) (2021-08-10)
+
+
+### Bug Fixes
+
+* **deps-dev:** bump @typescript-eslint/eslint-plugin ([467cf89](https://github.com/tanmen/disassemble-package/commit/467cf8935119eaf1a83441ae107141e1b0b18c8f))
+* **deps-dev:** bump @typescript-eslint/parser from 4.29.0 to 4.29.1 ([25adb7e](https://github.com/tanmen/disassemble-package/commit/25adb7e48c0405867982f3e2793392f79457450d))
+
 ## [1.5.36](https://github.com/tanmen/disassemble-package/compare/v1.5.35...v1.5.36) (2021-08-09)
 
 
