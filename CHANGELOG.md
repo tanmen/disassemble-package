@@ -1,3 +1,10 @@
+## [1.5.39](https://github.com/tanmen/disassemble-package/compare/v1.5.38...v1.5.39) (2021-08-11)
+
+
+### Bug Fixes
+
+* **deps:** bump path-parse from 1.0.6 to 1.0.7 ([f422e89](https://github.com/tanmen/disassemble-package/commit/f422e89d3cad409ebec390e9d493a4d0b63f5edd))
+
 ## [1.5.38](https://github.com/tanmen/disassemble-package/compare/v1.5.37...v1.5.38) (2021-08-11)
 
 
