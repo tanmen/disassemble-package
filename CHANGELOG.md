@@ -1,3 +1,10 @@
+## [1.5.40](https://github.com/tanmen/disassemble-package/compare/v1.5.39...v1.5.40) (2021-08-13)
+
+
+### Bug Fixes
+
+* **deps-dev:** bump @types/jest from 27.0.0 to 27.0.1 ([7a56ff2](https://github.com/tanmen/disassemble-package/commit/7a56ff2135030b9a675096b32d391440a89e0058))
+
 ## [1.5.39](https://github.com/tanmen/disassemble-package/compare/v1.5.38...v1.5.39) (2021-08-11)
 
 
