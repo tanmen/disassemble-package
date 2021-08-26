@@ -1,3 +1,10 @@
+## [1.5.45](https://github.com/tanmen/disassemble-package/compare/v1.5.44...v1.5.45) (2021-08-26)
+
+
+### Bug Fixes
+
+* **deps-dev:** bump semantic-release from 17.4.6 to 17.4.7 ([b63f7f2](https://github.com/tanmen/disassemble-package/commit/b63f7f2a44702b5c71b7fed4a91505355c85d812))
+
 ## [1.5.44](https://github.com/tanmen/disassemble-package/compare/v1.5.43...v1.5.44) (2021-08-25)
 
 
