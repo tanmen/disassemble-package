@@ -1,3 +1,10 @@
+## [1.5.46](https://github.com/tanmen/disassemble-package/compare/v1.5.45...v1.5.46) (2021-08-27)
+
+
+### Bug Fixes
+
+* **deps-dev:** bump typescript from 4.3.5 to 4.4.2 ([05209d4](https://github.com/tanmen/disassemble-package/commit/05209d4a8681724d510ae793d07362a1aec88fc9))
+
 ## [1.5.45](https://github.com/tanmen/disassemble-package/compare/v1.5.44...v1.5.45) (2021-08-26)
 
 
