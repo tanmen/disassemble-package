@@ -1,3 +1,10 @@
+## [1.5.48](https://github.com/tanmen/disassemble-package/compare/v1.5.47...v1.5.48) (2021-08-31)
+
+
+### Bug Fixes
+
+* **deps:** bump tar from 6.1.5 to 6.1.11 ([41cf30b](https://github.com/tanmen/disassemble-package/commit/41cf30bc73484c9263d33b9103428b36c9d4027b))
+
 ## [1.5.47](https://github.com/tanmen/disassemble-package/compare/v1.5.46...v1.5.47) (2021-08-31)
 
 
