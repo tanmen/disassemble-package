@@ -1,3 +1,10 @@
+## [1.5.49](https://github.com/tanmen/disassemble-package/compare/v1.5.48...v1.5.49) (2021-09-06)
+
+
+### Bug Fixes
+
+* **deps-dev:** bump @semantic-release/git from 9.0.0 to 9.0.1 ([d4e3b5a](https://github.com/tanmen/disassemble-package/commit/d4e3b5a68250c94d356f04879b495fb0d71178da))
+
 ## [1.5.48](https://github.com/tanmen/disassemble-package/compare/v1.5.47...v1.5.48) (2021-08-31)
 
 
