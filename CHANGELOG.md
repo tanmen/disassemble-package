@@ -1,3 +1,10 @@
+## [1.5.52](https://github.com/tanmen/disassemble-package/compare/v1.5.51...v1.5.52) (2021-09-13)
+
+
+### Bug Fixes
+
+* **deps:** bump axios from 0.21.1 to 0.21.4 ([3d5b1ea](https://github.com/tanmen/disassemble-package/commit/3d5b1ea9d7410ac186cfee5fee1720c7653f35e8))
+
 ## [1.5.51](https://github.com/tanmen/disassemble-package/compare/v1.5.50...v1.5.51) (2021-09-13)
 
 
