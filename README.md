@@ -45,6 +45,11 @@ disassemble-package <path> [--space count]
 ## Contribute
 Anyone welcome
 
+## Requests for use
+It would be helpful if you could give me a star if you are using it.
+There is a possibility of destructive changes or abrupt termination if there are not enough stars.
+
 ## License
 MIT License
+
 [![FOSSA Status](https://app.fossa.com/api/projects/custom%2B25020%2Fgithub.com%2Ftanmen%2Fdisassemble-package.svg?type=large)](https://app.fossa.com/projects/custom%2B25020%2Fgithub.com%2Ftanmen%2Fdisassemble-package?ref=badge_large)
