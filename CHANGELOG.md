@@ -1,3 +1,10 @@
+## [1.5.55](https://github.com/tanmen/disassemble-package/compare/v1.5.54...v1.5.55) (2021-09-17)
+
+
+### Bug Fixes
+
+* **deps-dev:** bump @types/semantic-release from 17.2.1 to 17.2.2 ([73b0cb5](https://github.com/tanmen/disassemble-package/commit/73b0cb5352336c67af533622e61608eb2a2d5214))
+
 ## [1.5.54](https://github.com/tanmen/disassemble-package/compare/v1.5.53...v1.5.54) (2021-09-14)
 
 
