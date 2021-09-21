@@ -1,3 +1,10 @@
+## [1.5.56](https://github.com/tanmen/disassemble-package/compare/v1.5.55...v1.5.56) (2021-09-21)
+
+
+### Bug Fixes
+
+* **deps:** bump semver-regex from 3.1.2 to 3.1.3 ([0441e7b](https://github.com/tanmen/disassemble-package/commit/0441e7b0e70f65e72b89abddacf93c4a39ad341c))
+
 ## [1.5.55](https://github.com/tanmen/disassemble-package/compare/v1.5.54...v1.5.55) (2021-09-17)
 
 
