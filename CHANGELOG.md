@@ -1,3 +1,10 @@
+## [1.5.57](https://github.com/tanmen/disassemble-package/compare/v1.5.56...v1.5.57) (2021-09-21)
+
+
+### Bug Fixes
+
+* **deps:** bump tmpl from 1.0.4 to 1.0.5 ([1bec2e6](https://github.com/tanmen/disassemble-package/commit/1bec2e64bf3e2912fa77820647c00e29c6126047))
+
 ## [1.5.56](https://github.com/tanmen/disassemble-package/compare/v1.5.55...v1.5.56) (2021-09-21)
 
 
