@@ -1,3 +1,10 @@
+## [1.5.62](https://github.com/tanmen/disassemble-package/compare/v1.5.61...v1.5.62) (2021-10-04)
+
+
+### Bug Fixes
+
+* **deps-dev:** bump semantic-release, @semantic-release/changelog, @semantic-release/git and @semantic-release/npm ([0cf99da](https://github.com/tanmen/disassemble-package/commit/0cf99da969f95ea41fd2abce4d9a138876e22ea4))
+
 ## [1.5.61](https://github.com/tanmen/disassemble-package/compare/v1.5.60...v1.5.61) (2021-09-28)
 
 
