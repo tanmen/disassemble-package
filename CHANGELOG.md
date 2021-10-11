@@ -1,3 +1,10 @@
+## [1.5.64](https://github.com/tanmen/disassemble-package/compare/v1.5.63...v1.5.64) (2021-10-11)
+
+
+### Bug Fixes
+
+* **deps-dev:** bump @types/eslint from 7.28.0 to 7.28.1 ([0bd9fe5](https://github.com/tanmen/disassemble-package/commit/0bd9fe54e4832ba7b55c74ca822d76ff42507eb3))
+
 ## [1.5.63](https://github.com/tanmen/disassemble-package/compare/v1.5.62...v1.5.63) (2021-10-05)
 
 
