@@ -1,3 +1,10 @@
+## [1.5.67](https://github.com/tanmen/disassemble-package/compare/v1.5.66...v1.5.67) (2021-10-18)
+
+
+### Bug Fixes
+
+* **deps-dev:** bump @semantic-release/npm from 8.0.0 to 8.0.1 ([d431f6c](https://github.com/tanmen/disassemble-package/commit/d431f6c86f498c9f338f0fd529f7205ce4e02678))
+
 ## [1.5.66](https://github.com/tanmen/disassemble-package/compare/v1.5.65...v1.5.66) (2021-10-13)
 
 
