@@ -1,3 +1,10 @@
+## [1.5.75](https://github.com/tanmen/disassemble-package/compare/v1.5.74...v1.5.75) (2021-11-02)
+
+
+### Bug Fixes
+
+* **deps-dev:** bump @commitlint/config-conventional ([ac40722](https://github.com/tanmen/disassemble-package/commit/ac407223f026bdd8bed318ecc68111583f4f64db))
+
 ## [1.5.74](https://github.com/tanmen/disassemble-package/compare/v1.5.73...v1.5.74) (2021-11-02)
 
 
