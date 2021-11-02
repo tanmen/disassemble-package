@@ -1,3 +1,10 @@
+## [1.5.74](https://github.com/tanmen/disassemble-package/compare/v1.5.73...v1.5.74) (2021-11-02)
+
+
+### Bug Fixes
+
+* **deps-dev:** bump @commitlint/cli from 13.2.1 to 14.1.0 ([60361e4](https://github.com/tanmen/disassemble-package/commit/60361e49496064747fe3e40254575eaeafb9bf64))
+
 ## [1.5.73](https://github.com/tanmen/disassemble-package/compare/v1.5.72...v1.5.73) (2021-11-01)
 
 
