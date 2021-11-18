@@ -1,3 +1,12 @@
+## [1.5.81](https://github.com/tanmen/disassemble-package/compare/v1.5.80...v1.5.81) (2021-11-18)
+
+
+### Bug Fixes
+
+* **deps-dev:** bump @commitlint/config-conventional ([544d799](https://github.com/tanmen/disassemble-package/commit/544d799e03c2debdd7ad3f83074d97024e942899))
+* **deps-dev:** bump @types/eslint from 7.29.0 to 8.2.0 ([8abd2d0](https://github.com/tanmen/disassemble-package/commit/8abd2d083a297adc079d95420e49804b1dfca610))
+* **deps-dev:** bump typescript from 4.4.4 to 4.5.2 ([2fbe380](https://github.com/tanmen/disassemble-package/commit/2fbe3800aa46f73a252105cffd70fd217bb62559))
+
 ## [1.5.80](https://github.com/tanmen/disassemble-package/compare/v1.5.79...v1.5.80) (2021-11-18)
 
 
