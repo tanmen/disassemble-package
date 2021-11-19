@@ -1,3 +1,11 @@
+## [1.5.82](https://github.com/tanmen/disassemble-package/compare/v1.5.81...v1.5.82) (2021-11-19)
+
+
+### Bug Fixes
+
+* **deps-dev:** bump @types/jest from 27.0.2 to 27.0.3 ([b8fd400](https://github.com/tanmen/disassemble-package/commit/b8fd4003f2a891c66d4276a06f136ae64dde05f0))
+* **deps-dev:** bump lint-staged from 12.0.2 to 12.0.3 ([b6a72a7](https://github.com/tanmen/disassemble-package/commit/b6a72a710bae76527b79cb088a629e60e7b816d2))
+
 ## [1.5.81](https://github.com/tanmen/disassemble-package/compare/v1.5.80...v1.5.81) (2021-11-18)
 
 
