@@ -1,3 +1,10 @@
+## [1.5.85](https://github.com/tanmen/disassemble-package/compare/v1.5.84...v1.5.85) (2021-11-25)
+
+
+### Bug Fixes
+
+* **deps-dev:** bump semantic-release from 18.0.0 to 18.0.1 ([053e0d2](https://github.com/tanmen/disassemble-package/commit/053e0d2567374e2153fd9d44a73c78625a31cccf))
+
 ## [1.5.84](https://github.com/tanmen/disassemble-package/compare/v1.5.83...v1.5.84) (2021-11-23)
 
 
