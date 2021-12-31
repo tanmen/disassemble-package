@@ -1,3 +1,10 @@
+## [1.5.92](https://github.com/tanmen/disassemble-package/compare/v1.5.91...v1.5.92) (2021-12-31)
+
+
+### Bug Fixes
+
+* **deps-dev:** bump @types/jest from 27.0.3 to 27.4.0 ([a80cb94](https://github.com/tanmen/disassemble-package/commit/a80cb94feac2f063aca1aee1ab05c458cc106a6d))
+
 ## [1.5.91](https://github.com/tanmen/disassemble-package/compare/v1.5.90...v1.5.91) (2021-12-29)
 
 
