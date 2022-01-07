@@ -1,3 +1,10 @@
+## [1.5.94](https://github.com/tanmen/disassemble-package/compare/v1.5.93...v1.5.94) (2022-01-07)
+
+
+### Bug Fixes
+
+* **deps-dev:** bump @types/eslint from 8.2.1 to 8.2.2 ([994996d](https://github.com/tanmen/disassemble-package/commit/994996d80b6f47fc9152c11f2a91c46e12fd4373))
+
 ## [1.5.93](https://github.com/tanmen/disassemble-package/compare/v1.5.92...v1.5.93) (2022-01-03)
 
 
