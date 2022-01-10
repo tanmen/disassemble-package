@@ -1,3 +1,11 @@
+## [1.5.95](https://github.com/tanmen/disassemble-package/compare/v1.5.94...v1.5.95) (2022-01-10)
+
+
+### Bug Fixes
+
+* **deps-dev:** bump @commitlint/cli from 16.0.1 to 16.0.2 ([046a51f](https://github.com/tanmen/disassemble-package/commit/046a51fd4f3150d01743ceebb8163c6c9f515510))
+* **deps-dev:** bump lint-staged from 12.1.5 to 12.1.7 ([b5740a6](https://github.com/tanmen/disassemble-package/commit/b5740a66de13aade06569c21cdac3a2753ff7be6))
+
 ## [1.5.94](https://github.com/tanmen/disassemble-package/compare/v1.5.93...v1.5.94) (2022-01-07)
 
 
