@@ -1,3 +1,10 @@
+## [1.5.96](https://github.com/tanmen/disassemble-package/compare/v1.5.95...v1.5.96) (2022-01-15)
+
+
+### Bug Fixes
+
+* **deps:** bump follow-redirects from 1.14.3 to 1.14.7 ([3edf60f](https://github.com/tanmen/disassemble-package/commit/3edf60f36e71896c71affc6dc467451c0bc51789))
+
 ## [1.5.95](https://github.com/tanmen/disassemble-package/compare/v1.5.94...v1.5.95) (2022-01-10)
 
 
