@@ -1,3 +1,11 @@
+## [1.5.97](https://github.com/tanmen/disassemble-package/compare/v1.5.96...v1.5.97) (2022-01-19)
+
+
+### Bug Fixes
+
+* **deps-dev:** bump lint-staged from 12.1.7 to 12.2.0 ([e4acab1](https://github.com/tanmen/disassemble-package/commit/e4acab1a7ae53e4e325a73dfadf61ed28dce09bb))
+* **deps-dev:** bump semantic-release from 18.0.1 to 19.0.2 ([da70fa3](https://github.com/tanmen/disassemble-package/commit/da70fa35cc76880e6c8517b4c4e1ad1a167d0827))
+
 ## [1.5.96](https://github.com/tanmen/disassemble-package/compare/v1.5.95...v1.5.96) (2022-01-15)
 
 
