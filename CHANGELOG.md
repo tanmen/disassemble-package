@@ -1,3 +1,10 @@
+## [1.5.99](https://github.com/tanmen/disassemble-package/compare/v1.5.98...v1.5.99) (2022-01-20)
+
+
+### Bug Fixes
+
+* **deps:** bump trim-off-newlines from 1.0.1 to 1.0.3 ([31892d0](https://github.com/tanmen/disassemble-package/commit/31892d07f986fcd515c9ec04a4de2edf02942ab2))
+
 ## [1.5.98](https://github.com/tanmen/disassemble-package/compare/v1.5.97...v1.5.98) (2022-01-20)
 
 
