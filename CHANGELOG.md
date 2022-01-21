@@ -1,3 +1,11 @@
+## [1.5.101](https://github.com/tanmen/disassemble-package/compare/v1.5.100...v1.5.101) (2022-01-21)
+
+
+### Bug Fixes
+
+* **deps-dev:** bump lint-staged from 12.2.1 to 12.2.2 ([4bedac7](https://github.com/tanmen/disassemble-package/commit/4bedac7fd7520cbc0fe6a52aff3ce035bcd4c3dd))
+* **deps-dev:** bump typescript from 4.5.4 to 4.5.5 ([7035c63](https://github.com/tanmen/disassemble-package/commit/7035c636360c100cb9afc27b6349a5106d7ba82b))
+
 ## [1.5.100](https://github.com/tanmen/disassemble-package/compare/v1.5.99...v1.5.100) (2022-01-20)
 
 
