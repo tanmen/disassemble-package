@@ -1,3 +1,12 @@
+## [1.5.103](https://github.com/tanmen/disassemble-package/compare/v1.5.102...v1.5.103) (2022-01-24)
+
+
+### Bug Fixes
+
+* **deps-dev:** bump @types/eslint from 8.4.0 to 8.4.1 ([bc836f0](https://github.com/tanmen/disassemble-package/commit/bc836f0d0a12da4b219168adcc957e05f93440cf))
+* **deps-dev:** bump lint-staged from 12.2.2 to 12.3.1 ([b77dfa5](https://github.com/tanmen/disassemble-package/commit/b77dfa51a22f1667fc272d9dee734df313f54894))
+* **deps:** bump node-fetch from 2.6.1 to 2.6.7 ([b3e574a](https://github.com/tanmen/disassemble-package/commit/b3e574a885d6f77c626cb32c874aeca34a17f483))
+
 ## [1.5.102](https://github.com/tanmen/disassemble-package/compare/v1.5.101...v1.5.102) (2022-01-21)
 
 
