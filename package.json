@@ -31,7 +31,7 @@
   "dependencies": {
     "chalk": "^4.1.1",
     "command-line-args": "^5.1.1",
-    "ora": "^6.3.0"
+    "ora": "^7.0.0"
   },
   "devDependencies": {
     "@commitlint/cli": "^17.0.0",
