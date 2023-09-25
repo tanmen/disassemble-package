@@ -1,6 +1,5 @@
 {
   "name": "disassemble-package",
-  "type": "module",
   "version": "0.0.0",
   "description": "Separate the config contained in package.json into a file.",
   "main": "index.js",
