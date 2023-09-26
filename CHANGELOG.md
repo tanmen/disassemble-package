@@ -1,3 +1,10 @@
+## [1.6.1](https://github.com/tanmen/disassemble-package/compare/v1.6.0...v1.6.1) (2023-09-26)
+
+
+### Bug Fixes
+
+* **deps-dev:** bump @types/semantic-release from 20.0.1 to 20.0.2 ([71d2960](https://github.com/tanmen/disassemble-package/commit/71d2960884e926e8eb02e4fad4c455ded20902d2))
+
 # [1.6.0](https://github.com/tanmen/disassemble-package/compare/v1.5.104...v1.6.0) (2023-09-25)
 
 
