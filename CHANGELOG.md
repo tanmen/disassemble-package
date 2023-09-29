@@ -1,3 +1,10 @@
+## [1.6.2](https://github.com/tanmen/disassemble-package/compare/v1.6.1...v1.6.2) (2023-09-29)
+
+
+### Bug Fixes
+
+* **deps-dev:** bump @commitlint/cli from 17.7.1 to 17.7.2 ([01042c8](https://github.com/tanmen/disassemble-package/commit/01042c802b417ab994769895101cc564d575e467))
+
 ## [1.6.1](https://github.com/tanmen/disassemble-package/compare/v1.6.0...v1.6.1) (2023-09-26)
 
 
