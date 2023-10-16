@@ -1,3 +1,12 @@
+## [1.6.3](https://github.com/tanmen/disassemble-package/compare/v1.6.2...v1.6.3) (2023-10-16)
+
+
+### Bug Fixes
+
+* **deps-dev:** bump @commitlint/cli from 17.7.2 to 17.8.0 ([cb2427e](https://github.com/tanmen/disassemble-package/commit/cb2427e456a723c3d3d7d0cc4f6ef45aa2d441ab))
+* **deps-dev:** bump @commitlint/config-conventional ([23bf3d1](https://github.com/tanmen/disassemble-package/commit/23bf3d1dd4010b596cd9543b232fe9299d9067db))
+* **deps-dev:** bump lint-staged from 14.0.1 to 15.0.1 ([41c12ae](https://github.com/tanmen/disassemble-package/commit/41c12ae3206848eb19a6a295252b0cb0b047e578))
+
 ## [1.6.2](https://github.com/tanmen/disassemble-package/compare/v1.6.1...v1.6.2) (2023-09-29)
 
 
