@@ -1,3 +1,10 @@
+## [1.6.4](https://github.com/tanmen/disassemble-package/compare/v1.6.3...v1.6.4) (2023-10-17)
+
+
+### Bug Fixes
+
+* **deps:** bump @babel/traverse from 7.16.10 to 7.23.2 ([a427d9a](https://github.com/tanmen/disassemble-package/commit/a427d9a61ab8b13fb734b05640b129c036e2bb56))
+
 ## [1.6.3](https://github.com/tanmen/disassemble-package/compare/v1.6.2...v1.6.3) (2023-10-16)
 
 
