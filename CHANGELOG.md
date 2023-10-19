@@ -1,3 +1,11 @@
+## [1.6.6](https://github.com/tanmen/disassemble-package/compare/v1.6.5...v1.6.6) (2023-10-19)
+
+
+### Bug Fixes
+
+* **deps-dev:** bump @types/lint-staged from 13.2.0 to 13.2.1 ([d99d5f2](https://github.com/tanmen/disassemble-package/commit/d99d5f2fc96e5bb3e210e553ca8ea6d8f7d40ca3))
+* **deps-dev:** bump @types/semantic-release from 20.0.2 to 20.0.4 ([a63de37](https://github.com/tanmen/disassemble-package/commit/a63de371213019590dd0ded5a8736e41c6ed1901))
+
 ## [1.6.5](https://github.com/tanmen/disassemble-package/compare/v1.6.4...v1.6.5) (2023-10-18)
 
 
