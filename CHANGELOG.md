@@ -1,3 +1,10 @@
+## [1.6.7](https://github.com/tanmen/disassemble-package/compare/v1.6.6...v1.6.7) (2023-10-20)
+
+
+### Bug Fixes
+
+* **deps-dev:** bump lint-staged from 15.0.1 to 15.0.2 ([eee157a](https://github.com/tanmen/disassemble-package/commit/eee157adb3ef983bcf81ffb6fc29b71ac78b9af9))
+
 ## [1.6.6](https://github.com/tanmen/disassemble-package/compare/v1.6.5...v1.6.6) (2023-10-19)
 
 
