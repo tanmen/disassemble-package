@@ -1,3 +1,10 @@
+## [1.6.8](https://github.com/tanmen/disassemble-package/compare/v1.6.7...v1.6.8) (2023-10-23)
+
+
+### Bug Fixes
+
+* **deps-dev:** bump @commitlint/config-conventional ([48324d8](https://github.com/tanmen/disassemble-package/commit/48324d83d1687f0e442c98133aa3dc88a18b6f28))
+
 ## [1.6.7](https://github.com/tanmen/disassemble-package/compare/v1.6.6...v1.6.7) (2023-10-20)
 
 
