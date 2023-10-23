@@ -1,3 +1,10 @@
+## [1.6.9](https://github.com/tanmen/disassemble-package/compare/v1.6.8...v1.6.9) (2023-10-23)
+
+
+### Bug Fixes
+
+* **deps-dev:** bump @commitlint/cli from 17.8.0 to 18.0.0 ([5d51418](https://github.com/tanmen/disassemble-package/commit/5d514189d7b4bb53abb54959acfe779a0f0e4645))
+
 ## [1.6.8](https://github.com/tanmen/disassemble-package/compare/v1.6.7...v1.6.8) (2023-10-23)
 
 
