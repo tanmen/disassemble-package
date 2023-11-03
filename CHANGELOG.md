@@ -1,3 +1,10 @@
+## [1.6.13](https://github.com/tanmen/disassemble-package/compare/v1.6.12...v1.6.13) (2023-11-03)
+
+
+### Bug Fixes
+
+* **deps-dev:** bump @semantic-release/npm from 11.0.0 to 11.0.1 ([58f4f0c](https://github.com/tanmen/disassemble-package/commit/58f4f0ca08871ad95227825d0b3af417638a9e89))
+
 ## [1.6.12](https://github.com/tanmen/disassemble-package/compare/v1.6.11...v1.6.12) (2023-10-31)
 
 
