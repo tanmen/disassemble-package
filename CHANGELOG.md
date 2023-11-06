@@ -1,3 +1,10 @@
+## [1.6.14](https://github.com/tanmen/disassemble-package/compare/v1.6.13...v1.6.14) (2023-11-06)
+
+
+### Bug Fixes
+
+* **deps-dev:** bump semantic-release from 22.0.6 to 22.0.7 ([e140778](https://github.com/tanmen/disassemble-package/commit/e140778ab941a105b0ee42202d66979b92463ce2))
+
 ## [1.6.13](https://github.com/tanmen/disassemble-package/compare/v1.6.12...v1.6.13) (2023-11-03)
 
 
