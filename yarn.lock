@@ -1373,9 +1373,9 @@
   integrity sha512-qcUXuemtEu+E5wZSJHNxUXeCZhAfXKQ41D+duX+VYPde7xyEVZci+/oXKJL13tnRs9lR2pr4fod59GT6/X1/yQ==
 
 "@types/lint-staged@^13.2.0":
-  version "13.2.1"
-  resolved "https://registry.yarnpkg.com/@types/lint-staged/-/lint-staged-13.2.1.tgz#e3e71d74a204f023ed156b1a9a6a73103efa29d3"
-  integrity sha512-/pIzducFqyJAdXJb2pkQJNTIYBBph/XQdsBgn9oTuNjL1fMRw7AbutYzB0ODTxi8NYqJ9KUk9WyabZvpdNT/kQ==
+  version "13.2.2"
+  resolved "https://registry.yarnpkg.com/@types/lint-staged/-/lint-staged-13.2.2.tgz#42aa5c12633c740568a68b39224722abf1f7fd9c"
+  integrity sha512-9c2ffPMJ1geob6yBmLuxzYye11HzKyA/I4dRZ8NfrPgY6SyzXt2SROD8vB3YjdPZJqqcu3WXsRvrY3PZbb720A==
 
 "@types/minimist@^1.2.0":
   version "1.2.2"
