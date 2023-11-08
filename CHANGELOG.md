@@ -1,3 +1,12 @@
+## [1.6.15](https://github.com/tanmen/disassemble-package/compare/v1.6.14...v1.6.15) (2023-11-08)
+
+
+### Bug Fixes
+
+* **deps-dev:** bump @types/command-line-args from 5.2.2 to 5.2.3 ([a8cb630](https://github.com/tanmen/disassemble-package/commit/a8cb630945919a5aee94fb27272e90ec7f0315a2))
+* **deps-dev:** bump @types/lint-staged from 13.2.1 to 13.2.2 ([34f8a95](https://github.com/tanmen/disassemble-package/commit/34f8a95d6231b4109733d8fc5a31950abc9a4452))
+* **deps-dev:** bump @types/semantic-release from 20.0.4 to 20.0.5 ([7ea25da](https://github.com/tanmen/disassemble-package/commit/7ea25da00e382a40f1caf8d613ac596074fb734b))
+
 ## [1.6.14](https://github.com/tanmen/disassemble-package/compare/v1.6.13...v1.6.14) (2023-11-06)
 
 
