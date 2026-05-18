@@ -1,8 +1,12 @@
-import {writeFile} from 'fs/promises';
-import packageJson from '../../../test/package.json';
-import {disassembleCommitlint} from '../commitlint';
+import {jest} from '@jest/globals';
+import {packageJson} from '../../__fixtures__/packageJson.js';
 
-jest.mock('fs/promises');
+const writeFile = jest.fn(() => Promise.resolve());
+
+jest.unstable_mockModule('node:fs/promises', () => ({writeFile}));
+jest.unstable_mockModule('fs/promises', () => ({writeFile}));
+
+const {disassembleCommitlint} = await import('../commitlint.js');
 
 describe('nominal', () => {
   it('should be write file', async () => {
@@ -13,11 +17,11 @@ describe('nominal', () => {
 
     expect(json).not.toHaveProperty('commitlint');
     expect(writeFile)
-      .toBeCalledWith('path/.commitlintrc.json', JSON.stringify(packageJson.commitlint, undefined, space));
+      .toHaveBeenCalledWith('path/.commitlintrc.json', JSON.stringify(packageJson.commitlint, undefined, space));
   });
   it('should be skip', async () => {
     await disassembleCommitlint('path', {}, {space: 0});
 
-    expect(writeFile).not.toBeCalled();
+    expect(writeFile).not.toHaveBeenCalled();
   });
 });

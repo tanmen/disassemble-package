@@ -1,8 +1,12 @@
-import {writeFile} from 'fs/promises';
-import packageJson from '../../../test/package.json';
-import {disassembleBrowserslist} from '../browserslist';
+import {jest} from '@jest/globals';
+import {packageJson} from '../../__fixtures__/packageJson.js';
 
-jest.mock('fs/promises');
+const writeFile = jest.fn(() => Promise.resolve());
+
+jest.unstable_mockModule('node:fs/promises', () => ({writeFile}));
+jest.unstable_mockModule('fs/promises', () => ({writeFile}));
+
+const {disassembleBrowserslist} = await import('../browserslist.js');
 
 const result = `[production]
 >0.2%
@@ -21,11 +25,11 @@ describe('nominal', () => {
     await disassembleBrowserslist('path', json, {space});
 
     expect(json).not.toHaveProperty('browserslist');
-    expect(writeFile).toBeCalledWith('path/.browserslistrc', result);
+    expect(writeFile).toHaveBeenCalledWith('path/.browserslistrc', result);
   });
   it('should be skip', async () => {
     await disassembleBrowserslist('path', {}, {space: 0});
 
-    expect(writeFile).not.toBeCalled();
+    expect(writeFile).not.toHaveBeenCalled();
   });
 });

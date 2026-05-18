@@ -1,8 +1,12 @@
-import {writeFile} from 'fs/promises';
-import packageJson from '../../../test/package.json';
-import {disassembleElectronBuilder} from '../electron-builder';
+import {jest} from '@jest/globals';
+import {packageJson} from '../../__fixtures__/packageJson.js';
 
-jest.mock('fs/promises');
+const writeFile = jest.fn(() => Promise.resolve());
+
+jest.unstable_mockModule('node:fs/promises', () => ({writeFile}));
+jest.unstable_mockModule('fs/promises', () => ({writeFile}));
+
+const {disassembleElectronBuilder} = await import('../electron-builder.js');
 
 describe('nominal', () => {
   it('should be write file', async () => {
@@ -12,11 +16,12 @@ describe('nominal', () => {
     await disassembleElectronBuilder('path', json, {space});
 
     expect(json).not.toHaveProperty('build');
-    expect(writeFile).toBeCalledWith('path/electron-builder.json', JSON.stringify(packageJson.build, undefined, space));
+    expect(writeFile)
+      .toHaveBeenCalledWith('path/electron-builder.json', JSON.stringify(packageJson.build, undefined, space));
   });
   it('should be skip', async () => {
     await disassembleElectronBuilder('path', {}, {space: 0});
 
-    expect(writeFile).not.toBeCalled();
+    expect(writeFile).not.toHaveBeenCalled();
   });
 });

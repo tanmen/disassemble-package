@@ -1,8 +1,12 @@
-import {writeFile} from 'fs/promises';
-import packageJson from '../../../test/package.json';
-import {disassembleHusky} from '../husky';
+import {jest} from '@jest/globals';
+import {packageJson} from '../../__fixtures__/packageJson.js';
 
-jest.mock('fs/promises');
+const writeFile = jest.fn(() => Promise.resolve());
+
+jest.unstable_mockModule('node:fs/promises', () => ({writeFile}));
+jest.unstable_mockModule('fs/promises', () => ({writeFile}));
+
+const {disassembleHusky} = await import('../husky.js');
 
 describe('nominal', () => {
   it('should be write file', async () => {
@@ -12,12 +16,12 @@ describe('nominal', () => {
     await disassembleHusky('path', json, {space});
 
     expect(json).not.toHaveProperty('husky');
-    expect(writeFile).toBeCalledWith('path/.huskyrc.js',
+    expect(writeFile).toHaveBeenCalledWith('path/.huskyrc.js',
       `module.exports = ${JSON.stringify(packageJson.husky, undefined, space)}`);
   });
   it('should be skip', async () => {
     await disassembleHusky('path', {}, {space: 0});
 
-    expect(writeFile).not.toBeCalled();
+    expect(writeFile).not.toHaveBeenCalled();
   });
 });
