@@ -1,9 +1,9 @@
 {
   "compilerOptions": {
-    "lib": ["ES2021"],
-    "module": "ESNext",
-    "target": "ES2021",
-    "moduleResolution": "node",
+    "lib": ["ES2022"],
+    "module": "NodeNext",
+    "target": "ES2022",
+    "moduleResolution": "NodeNext",
     "outDir": "dist",
     "declaration": true,
     "declarationMap": true,
@@ -23,12 +23,14 @@
     "esModuleInterop": true,
     "forceConsistentCasingInFileNames": true,
     "allowJs": true,
-    "resolveJsonModule": true
+    "resolveJsonModule": true,
+    "skipLibCheck": true,
+    "isolatedModules": true
   },
   "include": ["src", "types"],
   "exclude": [
     "src/**/*.spec.ts",
     "src/**/*.test.ts",
-    "src/**/__mocks__/**/*"
+    "src/**/__fixtures__/**/*"
   ]
 }

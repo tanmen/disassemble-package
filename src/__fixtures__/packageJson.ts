@@ -4,4 +4,6 @@ import {fileURLToPath} from 'node:url';
 
 const __dirname = dirname(fileURLToPath(import.meta.url));
 
-export const config = JSON.parse(readFileSync(join(__dirname, 'package.json'), 'utf8'));
+export const packageJson = JSON.parse(
+  readFileSync(join(__dirname, '../../test/package.json'), 'utf8'),
+);

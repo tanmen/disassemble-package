@@ -2,11 +2,11 @@
 import chalk from 'chalk';
 import commandLineArgs from 'command-line-args';
 import ora from 'ora';
-import {config} from './config';
-import {DisassemblePackage} from './index';
+import {config} from './config.js';
+import {DisassemblePackage} from './index.js';
 
 (async () => {
-  console.log(`${chalk.white('»')} ${chalk.gray(chalk`${config.name} {white v${config.version}}`)}`);
+  console.log(`${chalk.white('»')} ${chalk.gray(`${config.name} ${chalk.white(`v${config.version}`)}`)}`);
 
   const mainDefinitions = [
     {name: 'path', type: String, defaultOption: true},

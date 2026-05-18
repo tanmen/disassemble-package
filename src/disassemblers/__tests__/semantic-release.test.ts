@@ -1,8 +1,12 @@
-import {writeFile} from 'fs/promises';
-import packageJson from '../../../test/package.json';
-import {disassembleSemanticRelease} from '../semantic-release';
+import {jest} from '@jest/globals';
+import {packageJson} from '../../__fixtures__/packageJson.js';
 
-jest.mock('fs/promises');
+const writeFile = jest.fn(() => Promise.resolve());
+
+jest.unstable_mockModule('node:fs/promises', () => ({writeFile}));
+jest.unstable_mockModule('fs/promises', () => ({writeFile}));
+
+const {disassembleSemanticRelease} = await import('../semantic-release.js');
 
 describe('nominal', () => {
   it('should be write file', async () => {
@@ -12,12 +16,12 @@ describe('nominal', () => {
     await disassembleSemanticRelease('path', json, {space});
 
     expect(json).not.toHaveProperty('release');
-    expect(writeFile).toBeCalledWith('path/.releaserc',
+    expect(writeFile).toHaveBeenCalledWith('path/.releaserc',
       JSON.stringify(packageJson.release, undefined, space));
   });
   it('should be skip', async () => {
     await disassembleSemanticRelease('path', {}, {space: 0});
 
-    expect(writeFile).not.toBeCalled();
+    expect(writeFile).not.toHaveBeenCalled();
   });
 });

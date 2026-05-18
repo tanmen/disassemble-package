@@ -1,6 +1,6 @@
 import {readFile, writeFile} from 'fs/promises';
 import {join} from 'path';
-import * as disassemblers from './disassemblers';
+import * as disassemblers from './disassemblers/index.js';
 
 export const DisassemblePackage =
   async (path: string = process.cwd(), {space = 2}: Option) => {

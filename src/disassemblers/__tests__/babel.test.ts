@@ -1,8 +1,12 @@
-import {writeFile} from 'fs/promises';
-import packageJson from '../../../test/package.json';
-import {disassembleBabel} from '../babel';
+import {jest} from '@jest/globals';
+import {packageJson} from '../../__fixtures__/packageJson.js';
 
-jest.mock('fs/promises');
+const writeFile = jest.fn(() => Promise.resolve());
+
+jest.unstable_mockModule('node:fs/promises', () => ({writeFile}));
+jest.unstable_mockModule('fs/promises', () => ({writeFile}));
+
+const {disassembleBabel} = await import('../babel.js');
 
 describe('nominal', () => {
   it('should be write file', async () => {
@@ -12,11 +16,11 @@ describe('nominal', () => {
     await disassembleBabel('path', json, {space});
 
     expect(json).not.toHaveProperty('babel');
-    expect(writeFile).toBeCalledWith('path/.babelrc', JSON.stringify(packageJson.babel, undefined, space));
+    expect(writeFile).toHaveBeenCalledWith('path/.babelrc', JSON.stringify(packageJson.babel, undefined, space));
   });
   it('should be skip', async () => {
     await disassembleBabel('path', {}, {space: 0});
 
-    expect(writeFile).not.toBeCalled();
+    expect(writeFile).not.toHaveBeenCalled();
   });
 });
