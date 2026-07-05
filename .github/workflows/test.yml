@@ -95,6 +95,6 @@ jobs:
       - name: Install modules
         run: yarn install --frozen-lockfile
       - name: Check license
-        uses: fossas/fossa-action@v1
+        uses: fossas/fossa-action@v2
         with:
           api-key: ${{ secrets.FOSSA_API_KEY }}
