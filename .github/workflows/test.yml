@@ -61,6 +61,7 @@ jobs:
       contents: write
       issues: write
       pull-requests: write
+      id-token: write # npm trusted publishing (OIDC); provenance is attached automatically
     steps:
       - uses: actions/checkout@v7
         with:
@@ -71,15 +72,14 @@ jobs:
         with:
           node-version: ${{ env.node-version }}
           cache: yarn
-          registry-url: https://registry.npmjs.org/
+          # No registry-url: with it, setup-node v7 runs `yarn cache dir` against an .npmrc
+          # holding an unset ${NODE_AUTH_TOKEN} and yarn 1 aborts. npm auth is OIDC instead.
       - name: Install modules
         run: yarn install --frozen-lockfile
       - name: Publish
         run: yarn semantic-release
         env:
-          GH_TOKEN: ${{ secrets.GH_TOKEN }}
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
           HUSKY: 0
   License:
     if: ${{ github.event_name != 'pull_request' }}
