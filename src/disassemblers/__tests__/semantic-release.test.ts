@@ -1,4 +1,5 @@
 import {jest} from '@jest/globals';
+import {join} from 'path';
 import {packageJson} from '../../__fixtures__/packageJson.js';
 
 const writeFile = jest.fn(() => Promise.resolve());
@@ -16,7 +17,7 @@ describe('nominal', () => {
     await disassembleSemanticRelease('path', json, {space});
 
     expect(json).not.toHaveProperty('release');
-    expect(writeFile).toHaveBeenCalledWith('path/.releaserc',
+    expect(writeFile).toHaveBeenCalledWith(join('path', '.releaserc'),
       JSON.stringify(packageJson.release, undefined, space));
   });
   it('should be skip', async () => {

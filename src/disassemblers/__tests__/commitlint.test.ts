@@ -1,4 +1,5 @@
 import {jest} from '@jest/globals';
+import {join} from 'path';
 import {packageJson} from '../../__fixtures__/packageJson.js';
 
 const writeFile = jest.fn(() => Promise.resolve());
@@ -16,8 +17,8 @@ describe('nominal', () => {
     await disassembleCommitlint('path', json, {space});
 
     expect(json).not.toHaveProperty('commitlint');
-    expect(writeFile)
-      .toHaveBeenCalledWith('path/.commitlintrc.json', JSON.stringify(packageJson.commitlint, undefined, space));
+    expect(writeFile).toHaveBeenCalledWith(join('path', '.commitlintrc.json'),
+      JSON.stringify(packageJson.commitlint, undefined, space));
   });
   it('should be skip', async () => {
     await disassembleCommitlint('path', {}, {space: 0});
