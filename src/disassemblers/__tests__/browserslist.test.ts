@@ -1,4 +1,5 @@
 import {jest} from '@jest/globals';
+import {join} from 'path';
 import {packageJson} from '../../__fixtures__/packageJson.js';
 
 const writeFile = jest.fn(() => Promise.resolve());
@@ -25,7 +26,7 @@ describe('nominal', () => {
     await disassembleBrowserslist('path', json, {space});
 
     expect(json).not.toHaveProperty('browserslist');
-    expect(writeFile).toHaveBeenCalledWith('path/.browserslistrc', result);
+    expect(writeFile).toHaveBeenCalledWith(join('path', '.browserslistrc'), result);
   });
   it('should be skip', async () => {
     await disassembleBrowserslist('path', {}, {space: 0});

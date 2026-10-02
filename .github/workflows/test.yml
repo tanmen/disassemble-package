@@ -53,6 +53,26 @@ jobs:
         uses: codecov/codecov-action@v7
         with:
           token: ${{ secrets.CODECOV_TOKEN }}
+  # The required check is "Test" (Node 22, the lowest supported); a matrix there would
+  # rename it to "Test (22.x)" and block every PR. Newer Node lines run here instead.
+  TestNewerNode:
+    name: Test (Node ${{ matrix.node-version }})
+    runs-on: ubuntu-latest
+    strategy:
+      fail-fast: false
+      matrix:
+        node-version: [ 24.x, 26.x ]
+    steps:
+      - uses: actions/checkout@v7
+      - name: Setup Node.js
+        uses: actions/setup-node@v7
+        with:
+          node-version: ${{ matrix.node-version }}
+          cache: yarn
+      - name: Install modules
+        run: yarn install --frozen-lockfile
+      - name: Test
+        run: yarn test
   Publish:
     if: ${{ github.event_name != 'pull_request' }}
     runs-on: ubuntu-latest

@@ -1,4 +1,5 @@
 import {jest} from '@jest/globals';
+import {join} from 'path';
 import {packageJson} from '../../__fixtures__/packageJson.js';
 
 const writeFile = jest.fn(() => Promise.resolve());
@@ -16,8 +17,8 @@ describe('nominal', () => {
     await disassembleEslint('path', json, {space});
 
     expect(json).not.toHaveProperty('eslintConfig');
-    expect(writeFile)
-      .toHaveBeenCalledWith('path/.eslintrc', JSON.stringify(packageJson.eslintConfig, undefined, space));
+    expect(writeFile).toHaveBeenCalledWith(join('path', '.eslintrc'),
+      JSON.stringify(packageJson.eslintConfig, undefined, space));
   });
   it('should be skip', async () => {
     await disassembleEslint('path', {}, {space: 0});

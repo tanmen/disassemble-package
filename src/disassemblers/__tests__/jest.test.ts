@@ -1,4 +1,5 @@
 import {jest} from '@jest/globals';
+import {join} from 'path';
 import {packageJson} from '../../__fixtures__/packageJson.js';
 
 const writeFile = jest.fn(() => Promise.resolve());
@@ -16,7 +17,7 @@ describe('nominal', () => {
     await disassembleJest('path', json, {space});
 
     expect(json).not.toHaveProperty('jest');
-    expect(writeFile).toHaveBeenCalledWith('path/jest.config.json',
+    expect(writeFile).toHaveBeenCalledWith(join('path', 'jest.config.json'),
       JSON.stringify(packageJson.jest, undefined, space));
   });
   it('should be skip', async () => {
