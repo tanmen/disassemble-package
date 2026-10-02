@@ -29,7 +29,7 @@
     "skipLibCheck": true,
     "isolatedModules": true
   },
-  "include": ["src", "types"],
+  "include": ["src"],
   "exclude": [
     "src/**/*.spec.ts",
     "src/**/*.test.ts",
