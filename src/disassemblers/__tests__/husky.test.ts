@@ -1,4 +1,5 @@
 import {jest} from '@jest/globals';
+import {join} from 'path';
 import {packageJson} from '../../__fixtures__/packageJson.js';
 
 const writeFile = jest.fn(() => Promise.resolve());
@@ -16,7 +17,7 @@ describe('nominal', () => {
     await disassembleHusky('path', json, {space});
 
     expect(json).not.toHaveProperty('husky');
-    expect(writeFile).toHaveBeenCalledWith('path/.huskyrc.js',
+    expect(writeFile).toHaveBeenCalledWith(join('path', '.huskyrc.js'),
       `module.exports = ${JSON.stringify(packageJson.husky, undefined, space)}`);
   });
   it('should be skip', async () => {
