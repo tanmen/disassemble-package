@@ -1,3 +1,0 @@
-type Option = {
-  space: number
-}

@@ -1,5 +1,6 @@
 import {writeFile} from 'fs/promises';
 import {join} from 'path';
+import type {DisassemblerFunc, Option} from '../types.js';
 
 const template = (json: string) => `module.exports = ${json}`;
 

@@ -1,5 +1,6 @@
 import {writeFile} from 'fs/promises';
 import {join} from 'path';
+import type {DisassemblerFunc} from '../types.js';
 
 export const disassembleBrowserslist: DisassemblerFunc = async (path: string, json: any) => {
   if (Object.hasOwn(json, 'browserslist')) {
