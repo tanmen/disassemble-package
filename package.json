@@ -16,6 +16,9 @@
     "separate",
     "decompose"
   ],
+  "engines": {
+    "node": ">=22"
+  },
   "bin": {
     "disassemble-package": "cli.js"
   },
