@@ -1,0 +1,34 @@
+name: PR Title
+
+# Squash merges take the PR title as the commit subject (the GitHub standard in infra, 2026-10-03).
+# semantic-release decides the version from that subject, so PR titles must follow Conventional Commits.
+# This is a required status check (pr-title); do not narrow it with paths.
+on:
+  pull_request:
+    types: [opened, edited, synchronize, reopened]
+
+permissions:
+  pull-requests: read
+
+jobs:
+  pr-title:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: amannn/action-semantic-pull-request@48f256284bd46cdaab1048c3721360e808335d50 # v6.1.1
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        with:
+          types: |
+            feat
+            fix
+            perf
+            refactor
+            docs
+            chore
+            test
+            build
+            ci
+            style
+            revert
+          requireScope: false
