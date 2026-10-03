@@ -5,8 +5,14 @@ updates:
     reviewers: ["tanmen"]
     schedule:
       interval: "daily"
+    # dependencies を含む更新は fix(deps) にして公開する（利用者が入れる依存なので）。
+    # devDependencies だけの更新は chore(deps-dev) にして公開しない。利用者に届くのは dist と
+    # dependencies だけなのに、fix(deps-dev) だと semantic-release が更新のたびに npm へ新しい版を出していた。
+    # ⚠ 推移依存のセキュリティ更新は、開発用の依存の下にあっても fix(deps) で来ることがある
+    #   （dependabot が lockfile から開発用と判定できないと本番扱いにする。gridge #57 で実測）。そのときは公開される。
     commit-message:
       prefix: "fix"
+      prefix-development: "chore"
       include: "scope"
   - package-ecosystem: "github-actions"
     directory: "/"
