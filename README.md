@@ -1,7 +1,6 @@
 # DisassemblePackage
 [![npm](https://img.shields.io/npm/dw/disassemble-package)](https://www.npmjs.com/package/disassemble-package)
 [![Test](https://github.com/tanmen/disassemble-package/actions/workflows/test.yml/badge.svg)](https://github.com/tanmen/disassemble-package/actions/workflows/test.yml)
-[![CodeQL](https://github.com/tanmen/disassemble-package/actions/workflows/codeql-analysis.yml/badge.svg)](https://github.com/tanmen/disassemble-package/actions/workflows/codeql-analysis.yml)
 [![codecov](https://codecov.io/gh/tanmen/disassemble-package/branch/main/graph/badge.svg?token=74J9RU20ZA)](https://codecov.io/gh/tanmen/disassemble-package)
 [![semantic-release](https://img.shields.io/badge/%20%20%F0%9F%93%A6%F0%9F%9A%80-semantic--release-e10079.svg)](https://github.com/semantic-release/semantic-release)
 [![FOSSA Status](https://app.fossa.com/api/projects/custom%2B25020%2Fgithub.com%2Ftanmen%2Fdisassemble-package.svg?type=shield)](https://app.fossa.com/projects/custom%2B25020%2Fgithub.com%2Ftanmen%2Fdisassemble-package?ref=badge_shield)
