@@ -1,7 +1,8 @@
 name: PR Title
 
 # Squash merges take the PR title as the commit subject (the GitHub standard in infra, 2026-10-03).
-# semantic-release decides the version from that subject, so PR titles must follow Conventional Commits.
+# release.yml (tanmen/actions/release-decide) decides the version and the release notes from that
+# subject, so PR titles must follow Conventional Commits.
 # This is a required status check (pr-title); do not narrow it with paths.
 on:
   pull_request:

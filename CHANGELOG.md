@@ -1,3 +1,5 @@
+> This file is no longer updated. Changes after 1.6.16 are listed in [GitHub Releases](https://github.com/tanmen/disassemble-package/releases).
+
 ## [1.6.16](https://github.com/tanmen/disassemble-package/compare/v1.6.15...v1.6.16) (2023-11-13)
 
 
