@@ -26,8 +26,8 @@ name: Release
 #
 # Dry run: `gh workflow run release.yml -f dry-run=true` (add `--ref <branch>` to try a branch).
 # It runs decide, the tests, the build and `npm publish --dry-run` with the version decide
-# picked (or the last version when there is nothing to release), and touches neither npm nor
-# the tags. A broken release job otherwise goes unnoticed until the next release.
+# picked (or `<last version>-dry-run` when there is nothing to release), and touches neither
+# npm nor the tags. A broken release job otherwise goes unnoticed until the next release.
 
 on:
   schedule:
@@ -111,8 +111,9 @@ jobs:
       contents: write # the tag and the GitHub Release
       id-token: write # npm trusted publishing (OIDC); provenance is attached automatically
     env:
-      # Dry runs fall back to the last version when there is nothing to release.
-      VERSION: ${{ needs.decide.outputs.version || needs.decide.outputs.last-version }}
+      # Empty only in a dry run with nothing to release
+      VERSION: ${{ needs.decide.outputs.version }}
+      LAST_VERSION: ${{ needs.decide.outputs.last-version }}
       DRY_RUN: ${{ inputs.dry-run }}
     steps:
       # No write token in .git/config: install scripts of dependencies could read it.
@@ -135,10 +136,12 @@ jobs:
         run: cp package.json README.md LICENSE dist
 
       # Into dist/package.json only; nothing is committed.
+      # A dry run with nothing to release packs `<last version>-dry-run`: npm checks the registry
+      # even with --dry-run and refuses a version that is already published.
       - name: Write the version
         working-directory: dist
         run: |
-          npm pkg set "version=${VERSION:-0.0.0}"
+          npm pkg set "version=${VERSION:-${LAST_VERSION:-0.0.0}-dry-run}"
           npm pkg get name version
 
       # A run that published but failed before the tag leaves the version on npm without a tag,
@@ -179,7 +182,8 @@ jobs:
         working-directory: dist
         run: |
           if [ "$DRY_RUN" = true ]; then
-            npm publish --dry-run
+            # Without --tag npm refuses a prerelease, or a version not above the latest one
+            npm publish --dry-run --tag dry-run
           else
             npm publish
           fi
