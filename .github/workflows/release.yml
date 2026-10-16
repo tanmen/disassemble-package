@@ -1,0 +1,198 @@
+name: Release
+
+# Publishes disassemble-package to npm. There is no release PR.
+#
+#   merge into main (squash; the PR title is the commit subject, checked by pr-title.yml)
+#     └─ an external timer receives the push webhook and, once main has been quiet for a while,
+#        starts this workflow with workflow_dispatch. A burst of merges (dependabot included)
+#        becomes one run instead of one release per merge.
+#          ├─ decide   tanmen/actions/release-decide picks the version and the notes from the
+#          │           Conventional Commits since the last tag, or decides there is nothing to release
+#          ├─ test     Node 22 (the engines floor), 24 and 26, only when there is something to release
+#          └─ publish  build, write the version into dist/package.json (never committed),
+#                      npm publish (trusted publishing over OIDC), then the tag and the GitHub Release
+#
+# Triggers are workflow_dispatch (the timer, or by hand) and schedule (the nightly fallback for
+# when the timer is down). No push trigger: that would run decide on every merge.
+# ⚠ Keep the schedule: the timer only starts release.yml files that use release-decide AND have
+#    a schedule.
+#
+# The tag is the source of the version. package.json in the repository stays at 0.0.0, and
+# CHANGELOG.md is frozen; the list of changes lives in the GitHub Releases.
+#
+# ⚠ The trusted publisher for this package on npmjs.com names this file (release.yml).
+#    Renaming the file breaks publishing (ENEEDAUTH) until a trusted publisher for the new name
+#    is added there.
+#
+# Dry run: `gh workflow run release.yml -f dry-run=true` (add `--ref <branch>` to try a branch).
+# It runs decide, the tests, the build and `npm publish --dry-run` with the version decide
+# picked (or the last version when there is nothing to release), and touches neither npm nor
+# the tags. A broken release job otherwise goes unnoticed until the next release.
+
+on:
+  schedule:
+    # 03:23 JST (the top of the hour is crowded)
+    - cron: "23 18 * * *"
+  workflow_dispatch:
+    inputs:
+      # Must default to false: the timer dispatches with no inputs.
+      dry-run:
+        description: "Build and npm publish --dry-run only: nothing reaches npm, no tag, no Release"
+        type: boolean
+        default: false
+
+# Two dispatches in a row run one at a time. The first one releases nothing if main has moved
+# on; the second one decides again.
+# Dry runs get their own group: in a shared group a dry run would cancel a release run that is
+# waiting behind a running one (a group holds one pending run).
+concurrency:
+  group: ${{ inputs.dry-run && 'release-dry-run' || 'release' }}
+  cancel-in-progress: false
+
+permissions:
+  contents: read
+
+jobs:
+  decide:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    outputs:
+      # Empty when there is nothing to release; the reason is in the step summary.
+      version: ${{ steps.decide.outputs.version }}
+      tag: ${{ steps.decide.outputs.tag }}
+      notes: ${{ steps.decide.outputs.notes }}
+      # The version of the last tag, also set when nothing is released. Used by dry runs.
+      last-version: ${{ steps.decide.outputs.last-version }}
+    steps:
+      # The action checks out the full history and the tags itself, and switches node to 24,
+      # so it gets a job of its own.
+      - id: decide
+        uses: tanmen/actions/release-decide@v1.1.0
+        with:
+          # yarn.lock never reaches npm (users resolve the ranges in package.json themselves),
+          # so a commit that changes only yarn.lock does not count, even as fix(deps).
+          # Dependabot updates within a range touch only yarn.lock: 542 of the 646
+          # version-bumping commits in this repository's history (as of 2026-10) were such commits.
+          # Other paths outside dist (tests, lint and editor configs) are not listed: no
+          # version-bumping commit in the history touched only them.
+          # ⚠ A line whose path is missing at HEAD fails the run (fix it here when renaming).
+          paths: |
+            .
+            :(exclude)yarn.lock
+
+  test:
+    needs: decide
+    if: needs.decide.outputs.version != '' || inputs.dry-run
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    strategy:
+      fail-fast: false
+      matrix:
+        # The same lines as test.yml (Test and TestNewerNode). main does not require PR branches
+        # to be up to date, so the merged tree itself is tested before it is published.
+        node-version: [ 22.x, 24.x, 26.x ]
+    steps:
+      - uses: actions/checkout@v7
+        with:
+          persist-credentials: false
+      - uses: actions/setup-node@v7
+        with:
+          node-version: ${{ matrix.node-version }}
+          cache: yarn
+      - run: yarn install --frozen-lockfile
+      - run: yarn test
+
+  publish:
+    needs: [ decide, test ]
+    if: needs.decide.outputs.version != '' || inputs.dry-run
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    permissions:
+      contents: write # the tag and the GitHub Release
+      id-token: write # npm trusted publishing (OIDC); provenance is attached automatically
+    env:
+      # Dry runs fall back to the last version when there is nothing to release.
+      VERSION: ${{ needs.decide.outputs.version || needs.decide.outputs.last-version }}
+      DRY_RUN: ${{ inputs.dry-run }}
+    steps:
+      # No write token in .git/config: install scripts of dependencies could read it.
+      # gh uses GH_TOKEN below.
+      - uses: actions/checkout@v7
+        with:
+          persist-credentials: false
+      - uses: actions/setup-node@v7
+        with:
+          # Trusted publishing needs npm 11.5.1 or later; Node 22 still ships npm 10.
+          node-version: 24.x
+          cache: yarn
+          # No registry-url: with it, setup-node v7 runs `yarn cache dir` against an .npmrc
+          # holding an unset ${NODE_AUTH_TOKEN} and yarn 1 aborts. npm auth is OIDC instead.
+      - run: yarn install --frozen-lockfile
+      - run: yarn build
+
+      # The package is dist/: tsc's output plus the files npm shows on the package page.
+      - name: Assemble dist
+        run: cp package.json README.md LICENSE dist
+
+      # Into dist/package.json only; nothing is committed.
+      - name: Write the version
+        working-directory: dist
+        run: |
+          npm pkg set "version=${VERSION:-0.0.0}"
+          npm pkg get name version
+
+      # A run that published but failed before the tag leaves the version on npm without a tag,
+      # and the next run decides the same version again, which npm would refuse. So:
+      # - already published from this very commit (gitHead): skip the publish, go on to the tag
+      # - already published from another commit: stop. Tagging this commit would claim it was
+      #   published. Tag the commit npm has by hand:
+      #   gh release create v<version> --target <gitHead> --title v<version> --notes ...
+      - name: Check npm for this version
+        id: npm
+        if: inputs.dry-run != true
+        working-directory: dist
+        run: |
+          name=$(npm pkg get name | tr -d '"')
+          # A JSON array, or a bare string when there is a single version
+          versions=$(npm view "$name" versions --json)
+          count=$(node -p '[].concat(JSON.parse(process.argv[1])).length' "$versions")
+          if [ "$count" -lt 1 ]; then
+            echo "::error::npm view $name returned no versions; cannot tell whether $VERSION is published"
+            exit 1
+          fi
+          if node -e 'process.exit([].concat(JSON.parse(process.argv[1])).includes(process.argv[2]) ? 0 : 1)' "$versions" "$VERSION"; then
+            head=$(npm view "$name@$VERSION" gitHead)
+            if [ "$head" != "$GITHUB_SHA" ]; then
+              echo "::error::$name@$VERSION is already on npm, published from ${head:-an unknown commit}, not $GITHUB_SHA"
+              exit 1
+            fi
+            echo "$name@$VERSION is already on npm from this commit; skipping the publish"
+            echo "published=true" >> "$GITHUB_OUTPUT"
+          else
+            echo "published=false" >> "$GITHUB_OUTPUT"
+          fi
+
+      # prepublishOnly (pinst --disable) runs inside dist and renames the postinstall script,
+      # which only sets up this repository's dev tools, so it does not run for users.
+      - name: Publish to npm
+        if: steps.npm.outputs.published != 'true'
+        working-directory: dist
+        run: |
+          if [ "$DRY_RUN" = true ]; then
+            npm publish --dry-run
+          else
+            npm publish
+          fi
+
+      # After npm, never before: a tag marks the version as released, so a failed publish
+      # behind a tag would never be retried.
+      # ⚠ Tags and Releases made with GITHUB_TOKEN start no other workflow. Do not hang
+      #    anything off the tag.
+      - name: Create the tag and the GitHub Release
+        if: inputs.dry-run != true
+        env:
+          GH_TOKEN: ${{ github.token }}
+          GH_REPO: ${{ github.repository }}
+          TAG: ${{ needs.decide.outputs.tag }}
+          NOTES: ${{ needs.decide.outputs.notes }}
+        run: gh release create "$TAG" --target "$GITHUB_SHA" --title "$TAG" --notes "$NOTES"
