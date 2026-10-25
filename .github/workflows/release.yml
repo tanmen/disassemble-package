@@ -67,7 +67,7 @@ jobs:
       # The action checks out the full history and the tags itself, and switches node to 24,
       # so it gets a job of its own.
       - id: decide
-        uses: tanmen/actions/release-decide@v1.1.0
+        uses: tanmen/actions/release-decide@v1.1.1
         with:
           # yarn.lock never reaches npm (users resolve the ranges in package.json themselves),
           # so a commit that changes only yarn.lock does not count, even as fix(deps).
